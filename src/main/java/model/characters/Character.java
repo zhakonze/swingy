@@ -5,17 +5,20 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Character
+public abstract class Character
 {
-    protected String _name;
+    @Getter protected String _name;
     protected String _type;
     protected int level;
     protected int Xp;
     protected int Attack;
     protected int Defense;
     protected int _hitPoint;
+    protected int _xMovement;
+    protected int _yMovement;
 
+    public abstract void Attack(Character person);
 
-    public Character() {
-    }
+    public abstract void Defend(Character person, int damage);
+
 }
