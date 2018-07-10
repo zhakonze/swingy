@@ -1,29 +1,41 @@
+import lombok.Getter;
+import lombok.Setter;
 import model.characters.Hero;
+import view.Print;
 
 import java.util.Scanner;
-
+@Getter
+@Setter
 public class Main
 {
     public static void main(String[] args)
     {
         Scanner scanf = new Scanner(System.in);
 
-        Hero jack = new Hero("Zach");
-        System.out.println("##################### Welcome to Swingy #####################");
-        System.out.println("Create your Hero");
-        System.out.print("Name: ");
-        String _name = scanf.next();
-        System.out.println("------------------------------------------------------");
-        /*------------------- Hero Stats -------------------*/
-        System.out.println("Welcome ");
-        System.out.println("Hero class: ");
-        System.out.println("Level: ");
-        System.out.println("Xp: ");
-        System.out.println("------------------------------------------------------");
+        Print._menU();
+        int _opt = scanf.nextInt();
+        if(_opt == 1)
+        {
+            Print._preVhero();
+            if (_opt == 4)
+                main(args);
+        }
+        else if(_opt == 2)
+        {
+            Print._neWhero();
+            if (_opt == 2)
+                main(args);
+        }
+        else if (_opt == 3)
+        {
+            System.out.println("\\*------------------------------------------------------");
+            System.out.println("WORK IN PROGRESS");
+            System.out.println("------------------------------------------------------*/");
 
-        //System.out.println(jack.getName());
-        //System.out.println(jack.getName());
+        }
+    }
 
+    private static void main(String string) {
     }
 
 }

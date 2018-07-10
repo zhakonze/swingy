@@ -2,30 +2,37 @@ package model.characters;
 
 import lombok.Getter;
 import lombok.Setter;
+import model.artifacts.Armor;
+import model.artifacts.Weapon;
 
 @Getter
 @Setter
 public class Hero extends Character
 {
+    protected Weapon weapon;
+    protected Armor armor;
 
-    private String name;
     Hero() {
     }
 
     public Hero(String name)
     {
         //this._name = name;
-        this.name = name;
-        this.level = 1;
-        this._type = "Hero";
+        this._name = name;
+        this._level = 1;
+        this.Xp = 0;
 
     }
-    public void Attack(Character person)
+
+    public void Attack()
     {
+        System.out.println(this._name + " is attacking");
+
     }
 
     public void Defend(Character person, int damage)
     {
+        System.out.println("Your hero entered defence mode...");
     }
 
 

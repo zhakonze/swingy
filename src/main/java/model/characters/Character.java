@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 public abstract class Character
 {
-    @Getter protected String _name;
+    protected String _name;
     protected String _type;
-    protected int level;
+    protected int _level;
     protected int Xp;
     protected int Attack;
     protected int Defense;
@@ -17,7 +17,7 @@ public abstract class Character
     protected int _xMovement;
     protected int _yMovement;
 
-    public abstract void Attack(Character person);
+    public abstract void Attack();
 
     public abstract void Defend(Character person, int damage);
 
