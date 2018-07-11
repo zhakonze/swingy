@@ -12,9 +12,10 @@ public class Print {
         System.out.println(" >> 1.Select your Hero");
         System.out.println(" >> 2.Create new Hero");
         System.out.println(" >> 3.Switch to GUI");
+        System.out.println("|[]*---------------* Select option by chosing a number *---------------*[]|");
     }
 
-    public static void _preVhero()
+    public static int _preVhero()
     {
         Scanner scanf = new Scanner(System.in);
 
@@ -29,6 +30,7 @@ public class Print {
         if(_opt == 1) {
             System.out.println("Working on it");
         }
+        return (_opt);
         //_newHero.Attack();
     }
 
@@ -40,9 +42,14 @@ public class Print {
         String _name = scanf.next();
         System.out.println("\\*------------------------------------------------------");
         Hero _newHero = new Hero(_name);
-        System.out.println("Welcome " + _newHero.get_name());
-        System.out.println("You are currently at Level: " + _newHero.get_level());
-        System.out.println("Xp: " + _newHero.getXp());
+        System.out.println("Welcome to the depth of hell " + _newHero.get_name() + "\n" + "A few things you must know before we start");
+        System.out.println("\\*------------------------------------------------------");
+        System.out.println("Name: " + _newHero.get_name());
+        System.out.println("Level: " + _newHero.get_level());
+        System.out.println("Hp: " + _newHero.get_hitPoint());
+        System.out.println("Attack: " + _newHero.getAttack());
+        System.out.println("Armor: " + _newHero.getArmor());
+        System.out.println("Xp : " + _newHero.getXp());
         System.out.println("------------------------------------------------------*/");
         System.out.println("\\*------------------------------------------------------");
         System.out.println(" >> 1.Continue");
@@ -50,8 +57,11 @@ public class Print {
         System.out.println("------------------------------------------------------*/");
         //_newHero.Attack();
         int _opt = scanf.nextInt();
-        if(_opt == 1) {
+        if(_opt == 1)
+        {
+
             System.out.println("Working on it");
+            return;
         }
 
 

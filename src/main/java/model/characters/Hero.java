@@ -20,13 +20,16 @@ public class Hero extends Character
         //this._name = name;
         this._name = name;
         this._level = 1;
+        this._hitPoint = 20;
         this.Xp = 0;
+        this.Attack = 12;
 
     }
 
     public void Attack()
     {
         System.out.println(this._name + " is attacking");
+
 
     }
 

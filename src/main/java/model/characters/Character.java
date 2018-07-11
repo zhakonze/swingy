@@ -10,10 +10,10 @@ public abstract class Character
     protected String _name;
     protected String _type;
     protected int _level;
-    protected int Xp;
-    protected int Attack;
+    protected int Xp;//experience
+    protected int Attack;//
     protected int Defense;
-    protected int _hitPoint;
+    protected int _hitPoint; //health
     protected int _xMovement;
     protected int _yMovement;
 

@@ -16,15 +16,19 @@ public class Main
         int _opt = scanf.nextInt();
         if(_opt == 1)
         {
-            Print._preVhero();
-            if (_opt == 4)
+            _opt = Print._preVhero();
+            if (_opt == 4) {
                 main(args);
+                return;
+            }
         }
         else if(_opt == 2)
         {
             Print._neWhero();
-            if (_opt == 2)
+            if (_opt == 2) {
                 main(args);
+                return ;
+            }
         }
         else if (_opt == 3)
         {
@@ -33,9 +37,6 @@ public class Main
             System.out.println("------------------------------------------------------*/");
 
         }
-    }
-
-    private static void main(String string) {
     }
 
 }
