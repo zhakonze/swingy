@@ -5,12 +5,14 @@ import lombok.Setter;
 import model.artifacts.Armor;
 import model.artifacts.Weapon;
 
+import java.util.Random;
+
 @Getter
 @Setter
 public class Hero extends Character
 {
-    protected Weapon weapon;
-    protected Armor armor;
+    public Weapon weapon;
+    public Armor armor;
 
     Hero() {
     }
@@ -20,7 +22,7 @@ public class Hero extends Character
         //this._name = name;
         this._name = name;
         this._level = 1;
-        this._hitPoint = 20;
+        this._healthPoint = 20;
         this.Xp = 0;
         this.Attack = 12;
 
@@ -29,9 +31,18 @@ public class Hero extends Character
     public void Attack()
     {
         System.out.println(this._name + " is attacking");
+       /* if(Villain.getArmor() == null)
+        {
+            Villain.get_healthPoint() -= 5;
+        }*/
 
 
     }
+//    setcoor(int x, int y)
+//    {
+//        39
+//        map[39/2][39/2];
+//    }
 
     public void Defend(Character person, int damage)
     {
@@ -39,4 +50,36 @@ public class Hero extends Character
     }
 
 
+
+    public String fight(Hero hero, Villain villain)
+    {
+        String msg;
+        while (hero.get_healthPoint() != 0 && villain.get_healthPoint() != 0)
+        {
+            Random random = new Random();
+            int hero_ran = random.nextInt(2);
+            int villain_ran = random.nextInt(2);
+            if (hero_ran == 0)
+            {
+                msg = "Your hero entered defence mode...";
+
+            }
+            else
+            {
+                msg = "Your hero entered defence mode...";
+
+            }
+            if (villain_ran == 0)
+            {
+                msg = "Your hero entered defence mode...";
+
+            }
+            else
+            {
+                msg = "Your hero entered defence mode...";
+
+            }
+            return msg;
+        }
+    }
 }

@@ -1,13 +1,16 @@
+package model.characters;
+import lombok.Getter;
+import lombok.Setter;
 import model.artifacts.Armor;
 import model.artifacts.Weapon;
 import model.characters.Character;
 
-//package model.characters;
-//
+@Getter
+@Setter
 public class Villain extends Character
 {
-    protected Weapon weapon;
-    protected Armor armor;
+    private Weapon weapon;
+    private Armor armor;
 
 
     public Villain()
@@ -15,7 +18,7 @@ public class Villain extends Character
         //this._name = name;
         this._name = "Evil spiral";
         this._level = 1;
-        this._hitPoint = 25;
+        this._healthPoint = 25;
         this.Xp = 17;
         this.Attack = 30;
 

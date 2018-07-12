@@ -14,28 +14,36 @@ public class Main
 
         Print._menU();
         int _opt = scanf.nextInt();
-        if(_opt == 1)
+        while (true)
         {
-            _opt = Print._preVhero();
-            if (_opt == 4) {
-                main(args);
-                return;
+            if (_opt == 1)
+            {
+                _opt = Print._preVhero();
+                /*if (_opt == 4) {
+                    main(args);
+                    return;
+                }*/
             }
-        }
-        else if(_opt == 2)
-        {
-            Print._neWhero();
-            if (_opt == 2) {
-                main(args);
-                return ;
-            }
-        }
-        else if (_opt == 3)
-        {
-            System.out.println("\\*------------------------------------------------------");
-            System.out.println("WORK IN PROGRESS");
-            System.out.println("------------------------------------------------------*/");
+            else if (_opt == 2)
+            {
+                int _printOpt = Print._neWhero();
+                if (_printOpt == 1)
+                    break;
 
+                /*if (_opt == 2) {
+                    main(args);
+                    return;
+                }*/
+            }
+            else if (_opt == 3)
+            {
+                System.out.println("\\*------------------------------------------------------");
+                System.out.println("WORK IN PROGRESS");
+                System.out.println("------------------------------------------------------*/");
+                break;
+            }
+            Print._menU();
+            _opt = scanf.nextInt();
         }
     }
 

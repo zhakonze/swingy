@@ -34,7 +34,7 @@ public class Print {
         //_newHero.Attack();
     }
 
-    public static void _neWhero()
+    public static int _neWhero()
     {
         Scanner scanf = new Scanner(System.in);
 
@@ -46,7 +46,7 @@ public class Print {
         System.out.println("\\*------------------------------------------------------");
         System.out.println("Name: " + _newHero.get_name());
         System.out.println("Level: " + _newHero.get_level());
-        System.out.println("Hp: " + _newHero.get_hitPoint());
+        System.out.println("Hp: " + _newHero.get_healthPoint());
         System.out.println("Attack: " + _newHero.getAttack());
         System.out.println("Armor: " + _newHero.getArmor());
         System.out.println("Xp : " + _newHero.getXp());
@@ -58,11 +58,9 @@ public class Print {
         //_newHero.Attack();
         int _opt = scanf.nextInt();
         if(_opt == 1)
-        {
-
             System.out.println("Working on it");
-            return;
-        }
+        return (_opt);
+
 
 
     }
