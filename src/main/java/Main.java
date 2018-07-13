@@ -10,6 +10,30 @@ public class Main
 {
     public static void main(String[] args)
     {
+//        /*--------------------- Map ----------------------*/
+//        System.out.println(get_level());
+//        int _x = (get_level() - 1) * 5 + 10 - (get_level() % 2);
+//        int _y = (get_level() - 1) * 5 + 10 - (get_level() % 2);
+//        int map[][];
+//
+//        map = new int[_x][_y];
+
+
+
+
+        /*--------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
         Scanner scanf = new Scanner(System.in);
 
         Print._menU();

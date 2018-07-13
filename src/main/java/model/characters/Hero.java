@@ -81,5 +81,6 @@ public class Hero extends Character
             }
             return msg;
         }
+        return null;
     }
 }

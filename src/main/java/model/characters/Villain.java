@@ -28,7 +28,6 @@ public class Villain extends Character
     {
         System.out.println(this._name + " is attacking");
 
-
     }
 
     public void Defend(Character person, int damage)
