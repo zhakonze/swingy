@@ -10,26 +10,23 @@ public class Main
 {
     public static void main(String[] args)
     {
-//        /*--------------------- Map ----------------------*/
-//        System.out.println(get_level());
+        /*--------------------- Map ----------------------*/
+
+        //TODO: 1) get level, then find the size of map with this
+        //TODO: 2) initialize the array to zero
+        //TODO: 3) Create arraylist of villains with random coordinates, Math.random() * size
+        //TODO: 4) Iterate over the arraylist and then assign the position of enemy with a number [yEnemy][xEnemy] = 1
+
+//       System.out.println(get_level());
 //        int _x = (get_level() - 1) * 5 + 10 - (get_level() % 2);
 //        int _y = (get_level() - 1) * 5 + 10 - (get_level() % 2);
-//        int map[][];
+//        int _map[][];
 //
-//        map = new int[_x][_y];
-
+//        _map = new int[_x][_y];
 
 
 
         /*--------------------------------------------------*/
-
-
-
-
-
-
-
-
 
 
 
@@ -66,6 +63,13 @@ public class Main
                 System.out.println("------------------------------------------------------*/");
                 break;
             }
+            else
+            {
+                System.out.println("You Have Entered An Invalid Command");
+                break;
+
+            }
+
             Print._menU();
             _opt = scanf.nextInt();
         }

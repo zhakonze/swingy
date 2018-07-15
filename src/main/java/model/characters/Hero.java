@@ -28,7 +28,7 @@ public class Hero extends Character
 
     }
 
-    public void Attack()
+    public void Attack(Character person)
     {
         System.out.println(this._name + " is attacking");
        /* if(Villain.getArmor() == null)
@@ -36,13 +36,11 @@ public class Hero extends Character
             Villain.get_healthPoint() -= 5;
         }*/
 
-
     }
-//    setcoor(int x, int y)
-//    {
-//        39
-//        map[39/2][39/2];
-//    }
+    void setPosition(int _x, int _y)
+    {
+        _map = new int[_x/2][_y/2];
+    }
 
     public void Defend(Character person, int damage)
     {

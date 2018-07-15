@@ -17,7 +17,7 @@ public abstract class Character
     protected int _xMovement;
     protected int _yMovement;
 
-    public abstract void Attack();
+    public abstract void Attack(Character person);
 
     public abstract void Defend(Character person, int damage);
 

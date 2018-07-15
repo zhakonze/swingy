@@ -24,7 +24,7 @@ public class Villain extends Character
 
     }
 
-    public void Attack()
+    public void Attack(Character person)
     {
         System.out.println(this._name + " is attacking");
 
