@@ -37,9 +37,19 @@ public class Hero extends Character
         }*/
 
     }
-    void setPosition(int _x, int _y)
+    void _setPosition(Map map)
     {
-        _map = new int[_x/2][_y/2];
+        map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;
+        this.set_xMovement(map.get_cols()/ 2);
+        this.set_yMovement(map.get_rows()/ 2);
+    }
+
+    void _moveHero(int x, int y)
+    {
+        map.get_grid()[this.get_yMovement()][this.get_xMovement()] == 0;
+        map.get_grid()[y][x] == 1;
+        this.set_xMovement(x);
+        this.set_yMovement(y);
     }
 
     public void Defend(Character person, int damage)
