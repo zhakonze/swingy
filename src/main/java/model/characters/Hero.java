@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import model.artifacts.Armor;
 import model.artifacts.Weapon;
+import view.Map;
 
 import java.util.Random;
 
@@ -14,14 +15,15 @@ public class Hero extends Character
     public Weapon weapon;
     public Armor armor;
 
-    Hero() {
+    Hero()
+    {
+
     }
 
     public Hero(String name)
     {
-        //this._name = name;
         this._name = name;
-        this._level = 1;
+        this._level = 4;
         this._healthPoint = 20;
         this.Xp = 0;
         this.Attack = 12;
@@ -31,26 +33,24 @@ public class Hero extends Character
     public void Attack(Character person)
     {
         System.out.println(this._name + " is attacking");
-       /* if(Villain.getArmor() == null)
-        {
-            Villain.get_healthPoint() -= 5;
-        }*/
-
-    }
-    void _setPosition(Map map)
-    {
-        map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;
-        this.set_xMovement(map.get_cols()/ 2);
-        this.set_yMovement(map.get_rows()/ 2);
     }
 
-    void _moveHero(int x, int y)
-    {
-        map.get_grid()[this.get_yMovement()][this.get_xMovement()] == 0;
-        map.get_grid()[y][x] == 1;
-        this.set_xMovement(x);
-        this.set_yMovement(y);
-    }
+//    void _setPosition(Map map)
+//    {
+//        //map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;//Grid:
+//        map.set_grid(map.get_yMovement(), map.get_xMovement(), 0);
+//        this.set_xMovement(map.get_cols()/ 2);
+//        this.set_yMovement(map.get_rows()/ 2);
+//    }
+
+//    void _moveHero(int x, int y)
+//    {
+//        //map.get_grid()[this.get_yMovement()][this.get_xMovement()] == 0;
+//        map.set_grid(this.get_yMovement(), this.get_xMovement(), 0);
+//        map.get_grid()[y][x] = 1;
+//        this.set_xMovement(x);
+//        this.set_yMovement(y);
+//    }
 
     public void Defend(Character person, int damage)
     {

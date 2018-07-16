@@ -8,7 +8,7 @@ public class Print {
 
     public static void _menU()
     {
-        System.out.println("##################### Welcome to Swingy #####################");
+        System.out.println("#####################-< Welcome to Swingy >-#####################");
         System.out.println(" >> 1.Select your Hero");
         System.out.println(" >> 2.Create new Hero");
         System.out.println(" >> 3.Switch to GUI");
@@ -57,8 +57,12 @@ public class Print {
         System.out.println("------------------------------------------------------*/");
         //_newHero.Attack();
         int _opt = scanf.nextInt();
-        if(_opt == 1)
-            System.out.println("Working on it");
+        if(_opt == 1){
+            Map map = new Map(_newHero);
+            map.displayMap();
+
+        }
+            //System.out.println("Working on it");
         return (_opt);
 
 
