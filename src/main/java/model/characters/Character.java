@@ -14,8 +14,8 @@ public abstract class Character
     protected int Attack;//
     protected int Defense;
     protected int _healthPoint; //health
-    protected int _xMovement;
-    protected int _yMovement;
+    protected int _xPosition;
+    protected int _yPosition;
 
     public abstract void Attack(Character person);
 

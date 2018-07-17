@@ -23,7 +23,7 @@ public class Hero extends Character
     public Hero(String name)
     {
         this._name = name;
-        this._level = 4;
+        this._level = 1;
         this._healthPoint = 20;
         this.Xp = 0;
         this.Attack = 12;
@@ -35,22 +35,23 @@ public class Hero extends Character
         System.out.println(this._name + " is attacking");
     }
 
-//    void _setPosition(Map map)
-//    {
-//        //map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;//Grid:
-//        map.set_grid(map.get_yMovement(), map.get_xMovement(), 0);
-//        this.set_xMovement(map.get_cols()/ 2);
-//        this.set_yMovement(map.get_rows()/ 2);
-//    }
+    void _setPosition(Map map, int x, int y)
+    {
+        //map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;//Grid:
+        //map.set_grid(this.get_yPosition(), this.get_xPosition(), 0);
+        x = (map.get_cols() / 2);
+        y = (map.get_rows()/ 2);
+        map.set_grid(x, y, 0);
+    }
 
-//    void _moveHero(int x, int y)
-//    {
-//        //map.get_grid()[this.get_yMovement()][this.get_xMovement()] == 0;
-//        map.set_grid(this.get_yMovement(), this.get_xMovement(), 0);
-//        map.get_grid()[y][x] = 1;
-//        this.set_xMovement(x);
-//        this.set_yMovement(y);
-//    }
+    /*void _moveHero(int x, int y)
+    {
+        //map.get_grid()[this.get_yMovement()][this.get_xMovement()] == 0;
+        map.set_grid(this.get_yMovement(), this.get_xMovement(), 0);
+        map.get_grid()[y][x] = 1;
+        this.set_xMovement(x);
+        this.set_yMovement(y);
+    }*/
 
     public void Defend(Character person, int damage)
     {
