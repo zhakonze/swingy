@@ -42,7 +42,7 @@ public class Map {
 
     void _setPosition()
     {
-        _newHero.//position X
+        //_newHero.//position X
         //same as above
     }
 
