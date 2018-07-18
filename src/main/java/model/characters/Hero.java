@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import model.artifacts.Armor;
 import model.artifacts.Weapon;
-import view.Map;
 
 import java.util.Random;
 
@@ -14,6 +13,8 @@ public class Hero extends Character
 {
     public Weapon weapon;
     public Armor armor;
+    private int x;
+    private int y;
 
     Hero()
     {
@@ -35,14 +36,24 @@ public class Hero extends Character
         System.out.println(this._name + " is attacking");
     }
 
-    void _setPosition(Map map, int x, int y)
-    {
-        //map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;//Grid:
-        //map.set_grid(this.get_yPosition(), this.get_xPosition(), 0);
-        x = (map.get_cols() / 2);
-        y = (map.get_rows()/ 2);
-        map.set_grid(x, y, 0);
+    public int getX() {
+        return x;
     }
+
+    public int getY() {
+
+        return y;
+    }
+
+//
+//    void _setPosition(Map map, int x, int y)
+//    {
+//        //map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;//Grid:
+//        //map.set_grid(this.get_yPosition(), this.get_xPosition(), 0);
+//        x = (map.get_cols() / 2);
+//        y = (map.get_rows()/ 2);
+//        map.set_grid(x, y, 0);
+//    }
 
     /*void _moveHero(int x, int y)
     {

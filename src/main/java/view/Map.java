@@ -10,10 +10,14 @@ public class Map {
 
     private static int _rows;
     public static int _cols;
+
     private char         _grid[][];
 
     private String _name;
     private Hero _newHero;
+
+
+
 
 
     public Map(Hero tempHero)
@@ -40,11 +44,11 @@ public class Map {
         return _grid;
     }
 
-    void _setPosition()
-    {
-        //_newHero.//position X
-        //same as above
-    }
+//    void _setPosition()
+//    {
+//       grid[_newHero.x][_newHero.y] = 1;
+//
+//    }
 
     public void displayMap()
     {
@@ -52,6 +56,17 @@ public class Map {
         {
             for (int j = 0; j < _cols; j++)
             {
+                if((_newHero.getX() == j) && (_newHero.getY() == i))
+                {
+                    System.out.print("P ");
+                    continue ;
+                }
+//                for each (enemy : enemies) {
+//                    if ((enemy.x = j) && (enemy.y == i)) {
+//                        System.out.print("E ");
+//                        continue ;
+//                    }
+//                }
                 System.out.print("* ");
             }
             System.out.print("\n");
