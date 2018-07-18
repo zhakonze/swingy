@@ -13,8 +13,8 @@ public class Hero extends Character
 {
     public Weapon weapon;
     public Armor armor;
-    private int x;
-    private int y;
+    private int x = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
+    private int y = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
 
     Hero()
     {
@@ -36,12 +36,14 @@ public class Hero extends Character
         System.out.println(this._name + " is attacking");
     }
 
-    public int getX() {
+    public int getX()
+    {
+        //System.out.println(x);
         return x;
     }
 
-    public int getY() {
-
+    public int getY()
+    {
         return y;
     }
 
