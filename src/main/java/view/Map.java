@@ -4,6 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 import model.characters.Hero;
 
+import static view.Colors.ANSI_RED;
+import static view.Colors.ANSI_RESET;
+import static view.Colors.ANSI_WHITE;
+
 @Getter
 @Setter
 public class Map {
@@ -53,7 +57,7 @@ public class Map {
             {
                 if((_newHero.getX() == j) && (_newHero.getY() == i))
                 {
-                    System.out.print("O ");
+                    System.out.print(ANSI_WHITE +"O ");
                     continue ;
                 }
 //                for each (enemy : enemies) {
@@ -62,10 +66,11 @@ public class Map {
 //                        continue ;
 //                    }
 //                }
-                System.out.print("* ");
+                System.out.print(ANSI_RED +"* ");
             }
             System.out.print("\n");
         }
+        System.out.print(ANSI_RESET +"* ");
     }
 
     public void set_grid(int y, int x, char value) {

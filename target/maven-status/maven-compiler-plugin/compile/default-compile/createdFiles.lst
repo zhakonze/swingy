@@ -15,6 +15,7 @@ model/characters/Character.class
 model/characters/Villain.class
 model/characters/Hero.class
 view/SelectHero.class
+view/Colors.class
 view/Print.class
 view/CustomizeHero.class
 view/NewHero.class
