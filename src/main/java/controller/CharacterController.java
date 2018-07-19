@@ -11,7 +11,7 @@ public class CharacterController
 
     private static void displayOptions(Map map)
     {
-        map.displayMap();
+        map.displayMap();//displays map initial start point and after movement position
         System.out.println("|-----# Movement #-----*|");
         System.out.println("| 1. Right              |");
         System.out.println("| 2. Left               |");
@@ -35,28 +35,24 @@ public class CharacterController
         if(_input == 1)
         {
             _newHero.setX(_newHero.getX() + 1);
-            map.displayMap();
             System.out.println("Player Moved Right....");
             return true;
         }
         else if (_input == 2)
         {
             _newHero.setX(_newHero.getX() - 1);
-            map.displayMap();
             System.out.println("Player Moved Left....");
             return true;
         }
         else if(_input == 3)
         {
             _newHero.setY(_newHero.getY() + 1);
-            map.displayMap();
             System.out.println("Player Moved Down....");
             return true;
         }
         else if(_input == 4)
         {
             _newHero.setY(_newHero.getY() - 1);
-            map.displayMap();
             System.out.println("Player Moved Up....");
             return true;
         }

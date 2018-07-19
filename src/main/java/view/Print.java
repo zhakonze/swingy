@@ -44,7 +44,7 @@ public class Print {
         String _name = scanf.next();
         System.out.println("|------------------------------------------------------|");
         Hero _newHero = new Hero(_name);
-        System.out.println("|Welcome to the depth of hell " + _newHero.get_name() + "\n" + "A few things you must know before we start");
+        System.out.println("| Welcome to the depth of hell " + _newHero.get_name() + "\n" + "| A few things you must know before we start");
         System.out.println("|------------------------------------------------------|");
         System.out.println("| Name: " + _newHero.get_name());
         System.out.println("| Level: " + _newHero.get_level());
