@@ -1,5 +1,7 @@
 package view;
 import java.util.Scanner;
+
+import controller.CharacterController;
 import model.characters.Hero;
 
 public class Print {
@@ -59,7 +61,11 @@ public class Print {
         int _opt = scanf.nextInt();
         if(_opt == 1){
             Map map = new Map(_newHero);
-            map.displayMap();
+            boolean gameContinues = true;
+            while (gameContinues)
+            {
+                gameContinues = CharacterController.manageMovement(_newHero, map);
+            }
 
         }
         return (_opt);

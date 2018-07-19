@@ -44,11 +44,6 @@ public class Map {
         return _grid;
     }
 
-//    void _setPosition()
-//    {
-//       grid[_newHero.x][_newHero.y] = 1;
-//
-//    }
 
     public void displayMap()
     {

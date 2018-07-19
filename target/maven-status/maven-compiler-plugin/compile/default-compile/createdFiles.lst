@@ -6,6 +6,7 @@ controller/GamePlayController.class
 view/WindowManger.class
 view/PlayMission.class
 model/artifacts/Weapon.class
+controller/CharacterController.class
 util/CharacterFactory.class
 model/artifacts/WeaponType.class
 Main.class

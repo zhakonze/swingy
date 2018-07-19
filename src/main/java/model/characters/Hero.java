@@ -13,8 +13,11 @@ public class Hero extends Character
 {
     public Weapon weapon;
     public Armor armor;
-    private int x = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
-    private int y = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
+    private float x = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
+
+
+
+    private float y = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
 
     Hero()
     {
@@ -36,17 +39,23 @@ public class Hero extends Character
         System.out.println(this._name + " is attacking");
     }
 
-    public int getX()
+    public float getX()
     {
-        //System.out.println(x);
         return x;
     }
 
-    public int getY()
+    public float getY()
     {
         return y;
     }
 
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
 //
 //    void _setPosition(Map map, int x, int y)
 //    {
