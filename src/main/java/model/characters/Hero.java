@@ -1,22 +1,16 @@
 package model.characters;
 
-import lombok.Getter;
-import lombok.Setter;
 import model.artifacts.Armor;
 import model.artifacts.Weapon;
 
 import java.util.Random;
 
-@Getter
-@Setter
+
 public class Hero extends Character
 {
     public Weapon weapon;
     public Armor armor;
     private float x = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
-
-
-
     private float y = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
 
     Hero()
@@ -56,28 +50,26 @@ public class Hero extends Character
     public void setY(float y) {
         this.y = y;
     }
-//
-//    void _setPosition(Map map, int x, int y)
-//    {
-//        //map.get_grid()[map.get_rows()/ 2][map.get_cols()/ 2] == 1;//Grid:
-//        //map.set_grid(this.get_yPosition(), this.get_xPosition(), 0);
-//        x = (map.get_cols() / 2);
-//        y = (map.get_rows()/ 2);
-//        map.set_grid(x, y, 0);
-//    }
-
-    /*void _moveHero(int x, int y)
-    {
-        //map.get_grid()[this.get_yMovement()][this.get_xMovement()] == 0;
-        map.set_grid(this.get_yMovement(), this.get_xMovement(), 0);
-        map.get_grid()[y][x] = 1;
-        this.set_xMovement(x);
-        this.set_yMovement(y);
-    }*/
 
     public void Defend(Character person, int damage)
     {
         System.out.println("Your hero entered defence mode...");
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
     }
 
 

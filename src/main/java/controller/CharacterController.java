@@ -24,33 +24,38 @@ public class CharacterController
     public static boolean manageMovement(Hero _newHero, Map map)
     {
         displayOptions(map);
-        int _input = scanf.nextInt();
+        int _input;
+
+        if(scanf.hasNextInt() == true)//can we read4
+            _input = scanf.nextInt();
+        else
+            return(false);
         if(_input == 1)
         {
             _newHero.setX(_newHero.getX() + 1);
             map.displayMap();
-            System.out.println("Move Up");
+            System.out.println("Moving Right....");
             return true;
         }
         else if (_input == 2)
         {
             _newHero.setX(_newHero.getX() - 1);
             map.displayMap();
-            System.out.println("Move Down");
+            System.out.println("Moving Left....");
             return true;
         }
         else if(_input == 3)
         {
             _newHero.setY(_newHero.getY() + 1);
             map.displayMap();
-            System.out.println("Move Left");
+            System.out.println("Moving Down....");
             return true;
         }
         else if(_input == 4)
         {
             _newHero.setY(_newHero.getY() - 1);
             map.displayMap();
-            System.out.println("Move Right");
+            System.out.println("Moving Up....");
             return true;
         }
         else if (_input == 5)
