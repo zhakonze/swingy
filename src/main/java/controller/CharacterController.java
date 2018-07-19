@@ -12,13 +12,15 @@ public class CharacterController
     private static void displayOptions(Map map)
     {
         map.displayMap();
-        System.out.println("----- MovemenT -----*/");
-        System.out.println("1. Right");
-        System.out.println("2. Left");
-        System.out.println("3. Down");
-        System.out.println("4. Up");
-        System.out.println("5. Exit");
-        System.out.println("--------------*/");
+        System.out.println("|-----# Movement #-----*|");
+        System.out.println("| 1. Right              |");
+        System.out.println("| 2. Left               |");
+        System.out.println("| 3. Down               |");
+        System.out.println("| 4. Up                 |");
+        System.out.println("|-----# Movement #-----*|");
+        System.out.println("|--------------*|");
+        System.out.println("|  5. Exit      |");
+        System.out.println("|--------------*|");
     }
 
     public static boolean manageMovement(Hero _newHero, Map map)
@@ -34,28 +36,28 @@ public class CharacterController
         {
             _newHero.setX(_newHero.getX() + 1);
             map.displayMap();
-            System.out.println("Moving Right....");
+            System.out.println("Player Moved Right....");
             return true;
         }
         else if (_input == 2)
         {
             _newHero.setX(_newHero.getX() - 1);
             map.displayMap();
-            System.out.println("Moving Left....");
+            System.out.println("Player Moved Left....");
             return true;
         }
         else if(_input == 3)
         {
             _newHero.setY(_newHero.getY() + 1);
             map.displayMap();
-            System.out.println("Moving Down....");
+            System.out.println("Player Moved Down....");
             return true;
         }
         else if(_input == 4)
         {
             _newHero.setY(_newHero.getY() - 1);
             map.displayMap();
-            System.out.println("Moving Up....");
+            System.out.println("Player Moved Up....");
             return true;
         }
         else if (_input == 5)

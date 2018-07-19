@@ -53,7 +53,7 @@ public class Map {
             {
                 if((_newHero.getX() == j) && (_newHero.getY() == i))
                 {
-                    System.out.print("P ");
+                    System.out.print("O ");
                     continue ;
                 }
 //                for each (enemy : enemies) {
