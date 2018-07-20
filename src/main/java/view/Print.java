@@ -69,8 +69,30 @@ public class Print {
 
         }
         return (_opt);
-
-
-
     }
+
+    public static void displayOptions(Map map)
+    {
+        map.displayMap();//displays map initial start point and after movement position
+        System.out.println("|-----# Movement #-----*|");
+        System.out.println("| 1. Right              |");
+        System.out.println("| 2. Left               |");
+        System.out.println("| 3. Down               |");
+        System.out.println("| 4. Up                 |");
+        System.out.println("|-----# Movement #-----*|");
+        System.out.println("|--------------*|");
+        System.out.println("|  5. Exit      |");
+        System.out.println("|--------------*|");
+    }
+
+    public static void _levelUp()
+    {
+        System.out.println("|-----# Carry On #-----*|");
+        System.out.println("| 1. Continue           |");
+        System.out.println("| 2. Back to Menu       |");
+        System.out.println("| 3. Exit               |");
+        System.out.println("|-----# ~~~~~~~~ #-----*|");
+    }
+
+
 }

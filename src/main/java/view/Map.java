@@ -12,6 +12,22 @@ import static view.Colors.ANSI_WHITE;
 @Setter
 public class Map {
 
+    public static int get_rows() {
+        return _rows;
+    }
+
+    public static void set_rows(int _rows) {
+        Map._rows = _rows;
+    }
+
+    public static int get_cols() {
+        return _cols;
+    }
+
+    public static void set_cols(int _cols) {
+        Map._cols = _cols;
+    }
+
     private static int _rows;
     public static int _cols;
 
@@ -70,7 +86,7 @@ public class Map {
             }
             System.out.print("\n");
         }
-        System.out.print(ANSI_RESET +"* ");
+        System.out.print(ANSI_RESET );
     }
 
     public void set_grid(int y, int x, char value) {

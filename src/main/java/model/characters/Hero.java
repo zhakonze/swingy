@@ -10,8 +10,9 @@ public class Hero extends Character
 {
     public Weapon weapon;
     public Armor armor;
-    private float x = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
-    private float y = (((get_level() - 1) * 5 + 10 - (get_level() % 2) / 2) - 1);
+    private float x;
+    private float y;
+
 
     Hero()
     {
@@ -21,7 +22,9 @@ public class Hero extends Character
     public Hero(String name)
     {
         this._name = name;
-        this._level = 1;
+        this._level = 4;
+        this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
+        this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this._healthPoint = 20;
         this.Xp = 0;
         this.Attack = 12;
