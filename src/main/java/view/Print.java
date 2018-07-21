@@ -75,10 +75,10 @@ public class Print {
     {
         map.displayMap();//displays map initial start point and after movement position
         System.out.println("|-----# Movement #-----*|");
-        System.out.println("| 1. Right              |");
-        System.out.println("| 2. Left               |");
-        System.out.println("| 3. Down               |");
-        System.out.println("| 4. Up                 |");
+        System.out.println("| 1. Down               |");
+        System.out.println("| 2. Up                 |");
+        System.out.println("| 3. Right              |");
+        System.out.println("| 4. Left               |");
         System.out.println("|-----# Movement #-----*|");
         System.out.println("|--------------*|");
         System.out.println("|  5. Exit      |");

@@ -3,14 +3,26 @@ package view;
 import lombok.Getter;
 import lombok.Setter;
 import model.characters.Hero;
+import model.characters.Villain;
 
-import static view.Colors.ANSI_RED;
-import static view.Colors.ANSI_RESET;
-import static view.Colors.ANSI_WHITE;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import static view.Colors.*;
 
 @Getter
 @Setter
-public class Map {
+public class Map
+{
+    private static int _rows;
+    public static int _cols;
+
+    private char         _grid[][];
+
+    private String _name;
+    private Hero _newHero;
+    private List<Villain> _newVillains = new ArrayList<>();
 
     public static int get_rows() {
         return _rows;
@@ -28,14 +40,6 @@ public class Map {
         Map._cols = _cols;
     }
 
-    private static int _rows;
-    public static int _cols;
-
-    private char         _grid[][];
-
-    private String _name;
-    private Hero _newHero;
-
 
 
 
@@ -47,6 +51,7 @@ public class Map {
         _rows = ((_newHero.get_level() - 1) * 5 + 10 - (_newHero.get_level() % 2));
         _cols = ((_newHero.get_level() - 1) * 5 + 10 - (_newHero.get_level() % 2));
         this._grid = new char[_rows][_cols];
+        enemySpawn();
         this.initMap();
     }
 
@@ -64,31 +69,63 @@ public class Map {
         return _grid;
     }
 
+    public void enemySpawn()
+    {
+        Random rand = new Random();
+        float _mapSize = (_rows * _cols);
+        float numberV = (float)(_mapSize * 0.030);
+        int cols;
+        int rows;
+
+        for(int i = 0; i < numberV; i++)
+        {
+            _newVillains.add(new Villain());
+            //Make sure two enemies do spawn on the same spot
+        }
+
+        for (Villain v : _newVillains)
+        {
+            cols = rand.nextInt(_cols);
+            rows = rand.nextInt(_rows);
+
+            v.setX(rows);
+            v.setY(cols);
+
+        }
+    }
 
     public void displayMap()
     {
+        Random random = new Random();
+        boolean didShow = false;
+
         for(int i = 0; i < _rows; i++)
         {
             for (int j = 0; j < _cols; j++)
             {
-                if((_newHero.getX() == j) && (_newHero.getY() == i))
-                {
-                    System.out.print(ANSI_WHITE +"O ");
-                    continue ;
+                didShow = false;
+                if (_newHero.getX() == i && _newHero.getY() == j) {
+                    System.out.print(ANSI_GREEN + "H " + ANSI_RESET);
                 }
-//                for each (enemy : enemies) {
-//                    if ((enemy.x = j) && (enemy.y == i)) {
-//                        System.out.print("E ");
-//                        continue ;
-//                    }
-//                }
-                System.out.print(ANSI_RED +"* ");
+                else
+                {
+                    for (Villain villi : _newVillains)
+                    {
+                        if (villi.getX() == i && villi.getY() == j )
+                        {
+                            System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
+                            didShow = true;
+                        }
+
+                    }
+                    if (didShow == false && i <= _rows && j <= _cols)
+                        System.out.print(ANSI_RED +"* ");
+                }
             }
             System.out.print("\n");
         }
         System.out.print(ANSI_RESET );
     }
-
     public void set_grid(int y, int x, char value) {
         _grid[y][x] = value;
     }

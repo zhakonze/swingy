@@ -23,26 +23,26 @@ public class CharacterController
         if(_input == 1 )
         {
             _newHero.setX(_newHero.getX() + 1);
-            System.out.println(_newHero.get_name() + " Moved Right....");
+            System.out.println(_newHero.get_name() + " Moved Down....");
 
             return true;
         }
         else if (_input == 2)
         {
             _newHero.setX(_newHero.getX() - 1);
-            System.out.println(_newHero.get_name() + " Moved Left....");
+            System.out.println(_newHero.get_name() + " Moved Up....");
             return true;
         }
         else if(_input == 3)
         {
             _newHero.setY(_newHero.getY() + 1);
-            System.out.println(_newHero.get_name() + " Moved Down....");
+            System.out.println(_newHero.get_name() + " Moved Right....");
             return true;
         }
         else if(_input == 4)
         {
             _newHero.setY(_newHero.getY() - 1);
-            System.out.println(_newHero.get_name() + " Moved Up....");
+            System.out.println(_newHero.get_name() + " Moved Left....");
             return true;
         }
         else if (_input == 5)
