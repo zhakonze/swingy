@@ -65,6 +65,16 @@ public class Map
                 _grid[i][j] = 0;
             }
         }
+        for (Villain villi : _newVillains)
+        {
+            //if (villi.getX() == i && villi.getY() == j)
+            //{
+            //    System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
+            //    didShow = true;
+            //}
+            _grid[(int)villi.getY()][(int)villi.getX()] = 1;
+
+        }
 
         return _grid;
     }
@@ -97,30 +107,37 @@ public class Map
     public void displayMap()
     {
         Random random = new Random();
-        boolean didShow = false;
+       // boolean didShow = false;
 
         for(int i = 0; i < _rows; i++)
         {
             for (int j = 0; j < _cols; j++)
             {
-                didShow = false;
+                //didShow = false;
                 if (_newHero.getX() == i && _newHero.getY() == j) {
                     System.out.print(ANSI_GREEN + "H " + ANSI_RESET);
+                } else if (_grid[i][j] == 1) {
+                    System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
+                   // didShow = true;
+
                 }
-                else
+                else {
+                    System.out.print(ANSI_RED +"* ");
+                }
+               /* else
                 {
                     for (Villain villi : _newVillains)
                     {
-                        if (villi.getX() == i && villi.getY() == j )
+                        if (villi.getX() == i && villi.getY() == j)
                         {
                             System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
                             didShow = true;
                         }
 
                     }
-                    if (didShow == false && i <= _rows && j <= _cols)
-                        System.out.print(ANSI_RED +"* ");
-                }
+                    if (didShow == false && i <= _rows && j <= _cols)//second part of if statement private enemies from moving the grid out of bound.
+                 */      // System.out.print(ANSI_RED +"* ");
+                //}
             }
             System.out.print("\n");
         }
