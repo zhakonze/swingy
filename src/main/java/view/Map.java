@@ -99,10 +99,6 @@ public class Map
 
             v.setX(rows);
             v.setY(cols);
-
-            System.out.println("X------->" + v.getX());
-            System.out.println("Y------->" + v.getY());
-
         }
     }
 
@@ -133,8 +129,6 @@ public class Map
 
             }
             System.out.print("\n");
-            System.out.println("X------->" + _newHero.getX());
-            System.out.println("Y------->" + _newHero.getY());
 
         }
         System.out.print(ANSI_RESET );

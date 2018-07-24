@@ -17,8 +17,6 @@ public class CharacterController
         {
             if (_newHero.getX() == map.get_newVillains().get(i).getX() && _newHero.getY() == map.get_newVillains().get(i).getY())
                 return true;
-            System.out.println("Hero : x = "+ _newHero.getX() + " : y = " + _newHero.getY());
-            System.out.println("Enemy: x = " + map.get_newVillains().get(i).getX() + " : y = "  + map.get_newVillains().get(i).getY());
         }
         return false;
     }
@@ -35,51 +33,48 @@ public class CharacterController
         {
             _newHero.setY(_newHero.getY() + 1);
             if (checkCollision(_newHero, map) == true)
-                System.out.println("Enemy infront");
-            System.out.println(_newHero.get_name() + " Moved Down....");
-            if (_newHero.getX() == villain.getX() && _newHero.getY() == villain.getY())
             {
-                System.out.println(" FIGHT.....");
+                Print.disEme(map);
+                return false;
             }
+            System.out.println(_newHero.get_name() + " Moved Down....");
 
             return true;
         }
         else if (_input == 2)
         {
-            System.out.println("Y = " + _newHero.getY());
             _newHero.setY(_newHero.getY() - 1);
             if (checkCollision(_newHero, map) == true)
-                System.out.println("Enemy infront");
-            System.out.println(_newHero.get_name() + " Moved Up....");
-            if (_newHero.getX() == villain.getX() && _newHero.getY() == villain.getY())
             {
-                System.out.println(" FIGHT.....");
+                Print.disEme(map);
+                return false;
             }
+            System.out.println(_newHero.get_name() + " Moved Up....");
+
             return true;
         }
         else if(_input == 3)
         {
             _newHero.setX(_newHero.getX() + 1);
             if (checkCollision(_newHero, map) == true)
-                System.out.println("Enemy infront");
-            System.out.println(_newHero.get_name() + " Moved Right....");
-            if (_newHero.getX() == villain.getX() && _newHero.getY() == villain.getY())
             {
-                System.out.println(" FIGHT.....");
+                Print.disEme(map);
+                return false;
             }
+            System.out.println(_newHero.get_name() + " Moved Right....");
+
             return true;
         }
         else if(_input == 4)
         {
             _newHero.setX(_newHero.getX() - 1);
             if (checkCollision(_newHero, map) == true)
-                System.out.println("Enemy infront");
-
-            System.out.println(_newHero.get_name() + " Moved Left....");
-            if (_newHero.getX() == villain.getX() && _newHero.getY() == villain.getY())
             {
-                System.out.println(" FIGHT.....");
+                Print.disEme(map);
+                return false;
             }
+            System.out.println(_newHero.get_name() + " Moved Left....");
+
             return true;
         }
         else if (_input == 5)

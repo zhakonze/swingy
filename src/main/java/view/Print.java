@@ -75,7 +75,7 @@ public class Print {
 
     public static void displayOptions(Map map)
     {
-        map.displayMap();//displays map initial start point and after movement position
+        map.displayMap();//displays map initial start point and after movement position.
         System.out.println("|-----# Movement #-----*|");
         System.out.println("| 1. Down               |");
         System.out.println("| 2. Up                 |");
@@ -94,6 +94,19 @@ public class Print {
         System.out.println("| 2. Back to Menu       |");
         System.out.println("| 3. Exit               |");
         System.out.println("|-----# ~~~~~~~~ #-----*|");
+    }
+
+    public static void disEme(Map map)
+    {
+        map.displayMap();
+        System.out.println("|--------------------------*|");
+        System.out.println("| YOU HAVE ENCOUNTERED AN   |");
+        System.out.println("| ENEMY WHAT DO YOU WANT TO |");
+        System.out.println("| DO ?                      |");
+        System.out.println("| 1. Fight                  |");
+        System.out.println("| 2. Run                    |");
+        System.out.println("|--------------------------*|");
+
     }
 
 

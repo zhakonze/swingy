@@ -23,7 +23,7 @@ public class Hero extends Character
     public Hero(String name)
     {
         this._name = name;
-        this._level = 0;
+        this._level = 7;
         this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this._healthPoint = 20;
