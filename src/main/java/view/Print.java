@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 import controller.CharacterController;
 import model.characters.Hero;
+import model.characters.Villain;
 
 public class Print {
     Print()
@@ -61,10 +62,11 @@ public class Print {
         int _opt = scanf.nextInt();
         if(_opt == 1){
             Map map = new Map(_newHero);
+            Villain vili = new Villain();
             boolean gameContinues = true;
             while (gameContinues)
             {
-                gameContinues = CharacterController.manageMovement(_newHero, map);
+                gameContinues = CharacterController.manageMovement(_newHero, map, vili);
             }
 
         }

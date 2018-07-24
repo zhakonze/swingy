@@ -22,6 +22,15 @@ public class Map
 
     private String _name;
     private Hero _newHero;
+
+    public List<Villain> get_newVillains() {
+        return _newVillains;
+    }
+
+    public void set_newVillains(List<Villain> _newVillains) {
+        this._newVillains = _newVillains;
+    }
+
     private List<Villain> _newVillains = new ArrayList<>();
 
     public static int get_rows() {
@@ -39,9 +48,6 @@ public class Map
     public static void set_cols(int _cols) {
         Map._cols = _cols;
     }
-
-
-
 
 
     public Map(Hero tempHero)
@@ -67,15 +73,8 @@ public class Map
         }
         for (Villain villi : _newVillains)
         {
-            //if (villi.getX() == i && villi.getY() == j)
-            //{
-            //    System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
-            //    didShow = true;
-            //}
             _grid[(int)villi.getY()][(int)villi.getX()] = 1;
-
         }
-
         return _grid;
     }
 
@@ -101,49 +100,47 @@ public class Map
             v.setX(rows);
             v.setY(cols);
 
+            System.out.println("X------->" + v.getX());
+            System.out.println("Y------->" + v.getY());
+
         }
     }
+
 
     public void displayMap()
     {
         Random random = new Random();
-       // boolean didShow = false;
+        boolean didShow = false;
 
         for(int i = 0; i < _rows; i++)
         {
             for (int j = 0; j < _cols; j++)
             {
-                //didShow = false;
-                if (_newHero.getX() == i && _newHero.getY() == j) {
+                didShow = false;
+                if (_newHero.getX() == j && _newHero.getY() == i)
+                {
                     System.out.print(ANSI_GREEN + "H " + ANSI_RESET);
-                } else if (_grid[i][j] == 1) {
+                }
+                else if (_grid[i][j] == 1)
+                {
                     System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
-                   // didShow = true;
+                    didShow = true;
 
                 }
                 else {
                     System.out.print(ANSI_RED +"* ");
                 }
-               /* else
-                {
-                    for (Villain villi : _newVillains)
-                    {
-                        if (villi.getX() == i && villi.getY() == j)
-                        {
-                            System.out.print(ANSI_YELLOW + "E " + ANSI_RESET);
-                            didShow = true;
-                        }
 
-                    }
-                    if (didShow == false && i <= _rows && j <= _cols)//second part of if statement private enemies from moving the grid out of bound.
-                 */      // System.out.print(ANSI_RED +"* ");
-                //}
             }
             System.out.print("\n");
+            System.out.println("X------->" + _newHero.getX());
+            System.out.println("Y------->" + _newHero.getY());
+
         }
         System.out.print(ANSI_RESET );
     }
+
     public void set_grid(int y, int x, char value) {
-        _grid[y][x] = value;
+        _grid[x][y] = value;
     }
 }

@@ -3,6 +3,7 @@ package model.characters;
 import model.artifacts.Armor;
 import model.artifacts.Weapon;
 
+import java.util.Map;
 import java.util.Random;
 
 
@@ -22,7 +23,7 @@ public class Hero extends Character
     public Hero(String name)
     {
         this._name = name;
-        this._level = 10;
+        this._level = 0;
         this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this._healthPoint = 20;
@@ -77,36 +78,37 @@ public class Hero extends Character
 
 
 
-    public String fight(Hero hero, Villain villain)
+    public void fight(Hero hero, Villain villain)
     {
-        String msg;
-        while (hero.get_healthPoint() != 0 && villain.get_healthPoint() != 0)
+
+        //String msg;
+        if (hero.getX() == villain.getX() && hero.getY() == villain.getY())
         {
-            Random random = new Random();
-            int hero_ran = random.nextInt(2);
-            int villain_ran = random.nextInt(2);
-            if (hero_ran == 0)
-            {
-                msg = "Your hero entered defence mode...";
-
-            }
-            else
-            {
-                msg = "Your hero entered defence mode...";
-
-            }
-            if (villain_ran == 0)
-            {
-                msg = "Your hero entered defence mode...";
-
-            }
-            else
-            {
-                msg = "Your hero entered defence mode...";
-
-            }
-            return msg;
+            System.out.println("Your hero entered defence mode...");
+//            Random random = new Random();
+//            int hero_ran = random.nextInt(2);
+//            int villain_ran = random.nextInt(2);
+//            if (hero_ran == 0)
+//            {
+//                msg = "Your hero entered defence mode...";
+//
+//            }
+//            else
+//            {
+//                msg = "Your hero entered defence mode...";
+//
+//            }
+//            if (villain_ran == 0)
+//            {
+//                msg = "Your hero entered defence mode...";
+//
+//            }
+//            else
+//            {
+//                msg = "Your hero entered defence mode...";
+//
+//            }
+//            return msg;
         }
-        return null;
     }
 }
