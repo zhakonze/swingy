@@ -24,11 +24,10 @@ public class Villain extends Character
 
     public Villain(String name)
     {
-        this._name = name;
-        this._level = 4;
-        this._healthPoint = 20;
-        this.Xp = 0;
-        this.Attack = 12;
+        this._name = "Hero Slayer";
+        this._healthPoint = 50;
+        this.Attack = 10;
+        this.Defense = 15;
 
     }
 

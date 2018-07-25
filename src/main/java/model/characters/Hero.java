@@ -26,7 +26,7 @@ public class Hero extends Character
         this._level = 7;
         this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
-        this._healthPoint = 20;
+        this._healthPoint = 100;
         this.Xp = 0;
         this.Attack = 12;
 
@@ -76,39 +76,4 @@ public class Hero extends Character
         this.armor = armor;
     }
 
-
-
-    public void fight(Hero hero, Villain villain)
-    {
-
-        //String msg;
-        if (hero.getX() == villain.getX() && hero.getY() == villain.getY())
-        {
-            System.out.println("Your hero entered defence mode...");
-//            Random random = new Random();
-//            int hero_ran = random.nextInt(2);
-//            int villain_ran = random.nextInt(2);
-//            if (hero_ran == 0)
-//            {
-//                msg = "Your hero entered defence mode...";
-//
-//            }
-//            else
-//            {
-//                msg = "Your hero entered defence mode...";
-//
-//            }
-//            if (villain_ran == 0)
-//            {
-//                msg = "Your hero entered defence mode...";
-//
-//            }
-//            else
-//            {
-//                msg = "Your hero entered defence mode...";
-//
-//            }
-//            return msg;
-        }
-    }
 }

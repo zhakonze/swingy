@@ -1,5 +1,6 @@
 package view;
 
+import controller.CharacterController;
 import lombok.Getter;
 import lombok.Setter;
 import model.characters.Hero;
@@ -23,15 +24,16 @@ public class Map
     private String _name;
     private Hero _newHero;
 
-    public List<Villain> get_newVillains() {
-        return _newVillains;
-    }
-
-    public void set_newVillains(List<Villain> _newVillains) {
-        this._newVillains = _newVillains;
-    }
-
-    private List<Villain> _newVillains = new ArrayList<>();
+//    public List<Villain> get_newVillains() {
+//        return _newVillains;
+//    }
+//
+//    public void set_newVillains(List<Villain> _newVillains)
+//    {
+//        this._newVillains = _newVillains;
+//    }
+//
+//    private List<Villain> _newVillains = new ArrayList<>();
 
     public static int get_rows() {
         return _rows;
@@ -57,7 +59,7 @@ public class Map
         _rows = ((_newHero.get_level() - 1) * 5 + 10 - (_newHero.get_level() % 2));
         _cols = ((_newHero.get_level() - 1) * 5 + 10 - (_newHero.get_level() % 2));
         this._grid = new char[_rows][_cols];
-        enemySpawn();
+        CharacterController.enemySpawn();
         this.initMap();
     }
 
@@ -71,36 +73,37 @@ public class Map
                 _grid[i][j] = 0;
             }
         }
-        for (Villain villi : _newVillains)
+        for (Villain villi : CharacterController._newVillains)
         {
             _grid[(int)villi.getY()][(int)villi.getX()] = 1;
         }
         return _grid;
     }
 
-    public void enemySpawn()
-    {
-        Random rand = new Random();
-        float _mapSize = (_rows * _cols);
-        float numberV = (float)(_mapSize * 0.030);
-        int cols;
-        int rows;
-
-        for(int i = 0; i < numberV; i++)
-        {
-            _newVillains.add(new Villain());
-            //Make sure two enemies do spawn on the same spot
-        }
-
-        for (Villain v : _newVillains)
-        {
-            cols = rand.nextInt(_cols);
-            rows = rand.nextInt(_rows);
-
-            v.setX(rows);
-            v.setY(cols);
-        }
-    }
+//    public void enemySpawn()
+//    {
+//        Random rand = new Random();
+//        float _mapSize = (_rows * _cols);
+//        float numberV = (float)(_mapSize * 0.030);
+//        int cols;
+//        int rows;
+//
+//        for(int i = 0; i < numberV; i++)
+//        {
+//            _newVillains.add(new Villain());
+//            //Make sure two enemies do spawn on the same spot
+//        }
+//
+//        for (Villain v : _newVillains)
+//        {
+//            cols = rand.nextInt(_cols);
+//            rows = rand.nextInt(_rows);
+//
+//
+//            v.setX(rows);
+//            v.setY(cols);
+//        }
+//    }
 
 
     public void displayMap()
@@ -132,6 +135,16 @@ public class Map
 
         }
         System.out.print(ANSI_RESET );
+    }
+
+    public static void fight(Hero hero, Villain villain)
+    {
+
+        System.out.println(hero.get_name() + " Entered attack mode...\n");
+        System.out.println("your current oponenet has the following stats...");
+        System.out.println("Name             : " + villain.get_name());
+        System.out.println("Health Points    : " + villain.get_healthPoint());
+        System.out.println("Defence strength : " + villain.getDefense());
     }
 
     public void set_grid(int y, int x, char value) {
