@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import static view.Colors.*;
+
 public class CharacterController
 {
 
@@ -48,15 +50,49 @@ public class CharacterController
         return null;
     }
 
-    public static void fight(Hero hero)
-    {
+    public static void fight(Hero hero) {
+        String[] attacks = {"punch", "karate kick", "spear", "panga", "sword"};
+        Random rand = new Random();
 
         Villain villain = getVillain(hero.getX(), hero.getY());
-        System.out.println(hero.get_name() + " Entered attack mode...");
-        System.out.println("your current opponate has the following stats...");
+        System.out.println(ANSI_PURPLE + hero.get_name() + " Entered attack mode...");
+        System.out.println("Your current opponent has the following stats..." + ANSI_RESET);
         System.out.println("Name             : " + villain.get_name());
         System.out.println("Health Points    : " + villain.get_healthPoint());
         System.out.println("Defence strength : " + villain.getDefense());
+        System.out.println("Attack strength  : " + villain.getAttack());
+
+        int hero_dmg = hero.getAttack() - villain.getDefense();
+        int enemy_dmg = villain.getAttack() - hero.getDefense();
+
+
+        while (hero.get_healthPoint() > 0 && villain.get_healthPoint() > 0) {
+            int random_attack_name = rand.nextInt(5);
+            int rand_attacker = rand.nextInt(2);
+            switch (rand_attacker) {
+                case 0:
+                    System.out.println(ANSI_GREEN + hero.get_name() + ANSI_RESET + " attacks " + villain.get_name() + " with a " + attacks[random_attack_name] + " causing " + hero_dmg + " damage");
+                    villain.set_healthPoint(villain.get_healthPoint() - hero_dmg);
+                    break;
+                case 1:
+                    System.out.println(ANSI_RED + villain.get_name() + ANSI_RESET  + " attacks " + hero.get_name() + " with a " + attacks[random_attack_name] + " causing " + enemy_dmg + " damage");
+                    hero.set_healthPoint(hero.get_healthPoint() - enemy_dmg);
+                    break;
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(ANSI_GREEN + "Hero HP = " + ANSI_RESET + hero.get_healthPoint() + ANSI_RED + " ------ Villain HP = " + ANSI_RESET + villain.get_healthPoint());
+        }
+        if (hero.get_healthPoint() <= 0)
+            System.out.println("You were defeated.. YOU LOSE!!");
+        else if (villain.get_healthPoint() <= 0)
+        {
+            System.out.println("You defeated the enemy");
+            //do the pick up artifact logic here
+        }
     }
 
     public static void enemySpawn()
@@ -66,6 +102,11 @@ public class CharacterController
         float numberV = (float)(_mapSize * 0.030);
         int cols;
         int rows;
+        int _hel;
+        int _att;
+        int _def;
+        String _Nemz[] = {"Takoyo", "Opatako", "Lokono", "ZaWata", "Mulugu"};
+        String _Nem = _Nemz[new Random().nextInt(_Nemz.length)];
 
         for(int i = 0; i < numberV; i++)
         {
@@ -77,13 +118,17 @@ public class CharacterController
         {
             cols = rand.nextInt(Map.get_cols());
             rows = rand.nextInt(Map.get_rows());
+            _hel = rand.nextInt(80);
+            _att = rand.nextInt(15);
+            _def = rand.nextInt(20);
 
 
+            v.set_name(_Nem);
             v.setX(rows);
             v.setY(cols);
-            v.set_healthPoint(75);
-            v.setAttack(5);
-            v.setDefense(20);
+            v.set_healthPoint(_hel);
+            v.setAttack(_att);
+            v.setDefense(_def);
         }
     }
 
@@ -104,7 +149,13 @@ public class CharacterController
                 Print.disEme(map);
                 _input = scanf.nextInt();
                 if(_input == 1)
+                {
                     fight(_newHero);
+                    if(_newHero.get_healthPoint() > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else if (_input == 2)
                     Print.displayOptions(map);
                 return false;
@@ -121,7 +172,13 @@ public class CharacterController
                 Print.disEme(map);
                 _input = scanf.nextInt();
                 if(_input == 1)
+                {
                     fight(_newHero);
+                    if(_newHero.get_healthPoint() > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else if (_input == 2)
                     Print.displayOptions(map);
                 return false;
@@ -138,7 +195,13 @@ public class CharacterController
                 Print.disEme(map);
                 _input = scanf.nextInt();
                 if(_input == 1)
+                {
                     fight(_newHero);
+                    if(_newHero.get_healthPoint() > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else if (_input == 2)
                     Print.displayOptions(map);
                 return false;
@@ -155,7 +218,13 @@ public class CharacterController
                 Print.disEme(map);
                 _input = scanf.nextInt();
                 if(_input == 1)
+                {
                     fight(_newHero);
+                    if(_newHero.get_healthPoint() > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else if (_input == 2)
                     Print.displayOptions(map);
                 return false;
