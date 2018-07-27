@@ -50,6 +50,32 @@ public class CharacterController
         return null;
     }
 
+    private static boolean dothethings(Hero _newHero, Map map, Villain villain)
+    {
+        int _input;
+        Print.disEme(map);
+        _input = scanf.nextInt();
+        if(_input == 1)
+        {
+            fight(_newHero);
+            if(_newHero.get_healthPoint() > 0)
+                return true;
+            else
+                return false;
+        }
+        else if (_input == 2)
+            Print.displayOptions(map);
+        return false;
+    }
+
+    public static boolean checkEndMap(Hero _newHero, Map map)
+    {
+        int _mapSize = Map.get_cols();
+        if (_newHero.getX() == _mapSize - 1  || _newHero.getY() == _mapSize - 1 || _newHero.getX() == 0|| _newHero.getY() == 0)
+            return true;
+        return false;
+    }
+
     public static void fight(Hero hero) {
         String[] attacks = {"punch", "karate kick", "spear", "panga", "sword"};
         Random rand = new Random();
@@ -137,6 +163,25 @@ public class CharacterController
         Print.displayOptions(map);
         int _input;
 
+        if (checkCollision(_newHero) == true)
+            return (dothethings(_newHero, map, villain));
+
+        if (checkEndMap(_newHero, map) == true)
+        {
+            Print._levelUp(map);
+            _input = scanf.nextInt();
+            if(_input == 1)
+            {
+                _newHero.setXp(1000);
+                _newHero.set_level(_newHero.get_level() + 1);
+                Print._menU();
+                return true;
+            }
+            else if (_input == 2)
+                System.exit(1);
+        }
+        //Print.displayOptions(map);
+
         if(scanf.hasNextInt() == true)//can we read4
             _input = scanf.nextInt();
         else
@@ -144,22 +189,6 @@ public class CharacterController
         if(_input == 1 )
         {
             _newHero.setY(_newHero.getY() + 1);
-            if (checkCollision(_newHero) == true)
-            {
-                Print.disEme(map);
-                _input = scanf.nextInt();
-                if(_input == 1)
-                {
-                    fight(_newHero);
-                    if(_newHero.get_healthPoint() > 0)
-                        return true;
-                    else
-                        return false;
-                }
-                else if (_input == 2)
-                    Print.displayOptions(map);
-                return false;
-            }
             System.out.println(_newHero.get_name() + " Moved Down....");
 
             return true;
@@ -167,22 +196,6 @@ public class CharacterController
         else if (_input == 2)
         {
             _newHero.setY(_newHero.getY() - 1);
-            if (checkCollision(_newHero) == true)
-            {
-                Print.disEme(map);
-                _input = scanf.nextInt();
-                if(_input == 1)
-                {
-                    fight(_newHero);
-                    if(_newHero.get_healthPoint() > 0)
-                        return true;
-                    else
-                        return false;
-                }
-                else if (_input == 2)
-                    Print.displayOptions(map);
-                return false;
-            }
             System.out.println(_newHero.get_name() + " Moved Up....");
 
             return true;
@@ -190,22 +203,6 @@ public class CharacterController
         else if(_input == 3)
         {
             _newHero.setX(_newHero.getX() + 1);
-            if (checkCollision(_newHero) == true)
-            {
-                Print.disEme(map);
-                _input = scanf.nextInt();
-                if(_input == 1)
-                {
-                    fight(_newHero);
-                    if(_newHero.get_healthPoint() > 0)
-                        return true;
-                    else
-                        return false;
-                }
-                else if (_input == 2)
-                    Print.displayOptions(map);
-                return false;
-            }
             System.out.println(_newHero.get_name() + " Moved Right....");
 
             return true;
@@ -213,22 +210,6 @@ public class CharacterController
         else if(_input == 4)
         {
             _newHero.setX(_newHero.getX() - 1);
-            if (checkCollision(_newHero) == true)
-            {
-                Print.disEme(map);
-                _input = scanf.nextInt();
-                if(_input == 1)
-                {
-                    fight(_newHero);
-                    if(_newHero.get_healthPoint() > 0)
-                        return true;
-                    else
-                        return false;
-                }
-                else if (_input == 2)
-                    Print.displayOptions(map);
-                return false;
-            }
             System.out.println(_newHero.get_name() + " Moved Left....");
 
             return true;

@@ -13,9 +13,41 @@ public class Print {
     {
         System.out.println("|####################-< Welcome to Swingy >-####################|");
         System.out.println("| >> 1.Select your Hero                                         |");
-        System.out.println("| >> 2.Create new Hero                                          |");
+        System.out.println("| >> 2.Create a new Hero                                        |");
         System.out.println("| >> 3.Switch to GUI                                            |");
         System.out.println("|[]*----------* Select option by chosing a number *----------*[]|");
+
+        Scanner scanf = new Scanner(System.in);
+
+        int _opt = scanf.nextInt();
+        while (true)
+        {
+            if (_opt == 1)
+            {
+                _opt = Print._preVhero();
+            }
+            else if (_opt == 2)
+            {
+                int _printOpt = Print._neWhero();
+                if (_printOpt == 1)
+                    break;
+            }
+            else if (_opt == 3)
+            {
+                System.out.println("\\*------------------------------------------------------");
+                System.out.println("WORK IN PROGRESS");
+                System.out.println("------------------------------------------------------*/");
+                break;
+            }
+            else
+            {
+                System.out.println("You Have Entered An Invalid Command");
+                break;
+            }
+
+            Print._menU();
+            _opt = scanf.nextInt();
+        }
     }
 
     public static int _preVhero()
@@ -81,19 +113,22 @@ public class Print {
         System.out.println("| 2. Up                 |");
         System.out.println("| 3. Right              |");
         System.out.println("| 4. Left               |");
-        System.out.println("|-----# Movement #-----*|");
-        System.out.println("|--------------*|");
-        System.out.println("|  5. Exit      |");
-        System.out.println("|--------------*|");
+        System.out.println("|----------------------*|");
+        System.out.println("|----------------------*|");
+        System.out.println("|  5. Exit Game         |");
+        System.out.println("|----------------------*|");
     }
 
-    public static void _levelUp()
+    public static void _levelUp(Map map)
     {
-        System.out.println("|-----# Carry On #-----*|");
-        System.out.println("| 1. Continue           |");
-        System.out.println("| 2. Back to Menu       |");
-        System.out.println("| 3. Exit               |");
-        System.out.println("|-----# ~~~~~~~~ #-----*|");
+        map.displayMap();
+        System.out.println("|-----------------------------------------|");
+        System.out.println("| You Have Accomplished Your Mission And  |");
+        System.out.println("| Reached The End Of The Wall, What Would |");
+        System.out.println("| You Like To Do?                         |");
+        System.out.println("| 1. Continue                             |");
+        System.out.println("| 2. Exit Game                            |");
+        System.out.println("|-----------------------------------------|");
     }
 
     public static void disEme(Map map)

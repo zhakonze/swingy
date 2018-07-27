@@ -46,8 +46,8 @@ public class Map
     {
         _newHero = tempHero;
         _name = tempHero.get_name();
-        _rows = ((_newHero.get_level() - 1) * 5 + 10 - (_newHero.get_level() % 2));
-        _cols = ((_newHero.get_level() - 1) * 5 + 10 - (_newHero.get_level() % 2));
+        _rows = ((((_newHero.get_level() - 1) * 5) + 10) - (_newHero.get_level() % 2));
+        _cols = ((((_newHero.get_level() - 1) * 5) + 10) - (_newHero.get_level() % 2));
         this._grid = new char[_rows][_cols];
         CharacterController.enemySpawn();
         this.initMap();
