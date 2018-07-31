@@ -11,7 +11,7 @@ public class Print {
 
     public static void _menU()
     {
-        System.out.println("|####################-< Welcome to Swingy >-####################|");
+        System.out.println("|####################-[ Welcome to Swingy ]-####################|");
         System.out.println("| >> 1.Select your Hero                                         |");
         System.out.println("| >> 2.Create a new Hero                                        |");
         System.out.println("| >> 3.Switch to GUI                                            |");

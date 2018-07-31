@@ -57,9 +57,11 @@ public class CharacterController
         _input = scanf.nextInt();
         if(_input == 1)
         {
-            fight(_newHero);
+            fight(_newHero,map);
             if(_newHero.get_healthPoint() > 0)
+            {
                 return true;
+            }
             else
                 return false;
         }
@@ -76,7 +78,7 @@ public class CharacterController
         return false;
     }
 
-    public static void fight(Hero hero) {
+    public static void fight(Hero hero, Map map) {
         String[] attacks = {"punch", "karate kick", "spear", "panga", "sword"};
         Random rand = new Random();
 
@@ -90,6 +92,11 @@ public class CharacterController
 
         int hero_dmg = hero.getAttack() - villain.getDefense();
         int enemy_dmg = villain.getAttack() - hero.getDefense();
+
+        if (hero_dmg < 0)
+            hero_dmg = 0;
+        if (enemy_dmg < 0)
+            enemy_dmg = 0;
 
 
         while (hero.get_healthPoint() > 0 && villain.get_healthPoint() > 0) {
@@ -116,9 +123,24 @@ public class CharacterController
             System.out.println("You were defeated.. YOU LOSE!!");
         else if (villain.get_healthPoint() <= 0)
         {
+            map.get_grid()[hero.getY()][hero.getX()] = 0;
             System.out.println("You defeated the enemy");
+            hero.setX(hero.getX() + 1);
+
             //do the pick up artifact logic here
         }
+    }
+
+    public static void _Drops(Villain v)
+    {
+        System.out.println(v.get_name() + " dropped " + v.getArmor() + " and " + v.getWeapon());
+        System.out.println("Would you like to add it to the hero's artifacts?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+
+
+
+
     }
 
     public static void enemySpawn()

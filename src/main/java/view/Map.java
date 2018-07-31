@@ -19,6 +19,14 @@ public class Map
     private static int _rows;
     public static int _cols;
 
+    public char[][] get_grid() {
+        return _grid;
+    }
+
+    public void set_grid(char[][] _grid) {
+        this._grid = _grid;
+    }
+
     private char         _grid[][];
 
     private String _name;

@@ -17,6 +17,16 @@ public abstract class Character
     protected int _xPosition;
     protected int _yPosition;
 
+    public Helm getHelm() {
+        return helm;
+    }
+
+    public void setHelm(Helm helm) {
+        this.helm = helm;
+    }
+
+    public Helm helm;
+
     public abstract void Attack(Character person);
 
     public abstract void Defend(Character person, int damage);
@@ -93,4 +103,6 @@ public abstract class Character
         this._yPosition = _yPosition;
     }
 
+    private class Helm {
+    }
 }

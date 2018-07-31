@@ -19,3 +19,4 @@ view/Colors.class
 view/Print.class
 view/CustomizeHero.class
 view/NewHero.class
+model/characters/Character$Helm.class
