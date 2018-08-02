@@ -14,35 +14,35 @@ public class Main
 {
     public static void main(String[] args)
     {
-//        try
-//        {
-//            BufferedReader reader = new BufferedReader(new FileReader(args[1]));
-//            String line = reader.readLine();
-//            if (line != null)
-//            {
+        try
+        {
+            BufferedReader reader = new BufferedReader(new FileReader(args[1]));
+            String line = reader.readLine();
+            if (line != null)
+            {
                 Print._menU();
-//            }
-//        }
-//        catch (FileNotFoundException e)
-//        {
-//            System.out.println("Could not find file " + args[1]);
-//        }
-//        catch (IOException e)
-//        {
-//            System.out.println("There was an error whilst reading the file " + args[1]);
-//        }
-////        catch (ArrayIndexOutOfBoundsException e)
-////        {
-////            System.out.println("Please specify simulation file");
-////        }
-//        catch (NullPointerException e)
-//        {
-//            System.out.println("value is null");
-//        }
-//        catch (NumberFormatException e)
-//        {
-//            System.out.println("A number entered is not valid in file");
-//        }
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Could not find file " + args[1]);
+        }
+        catch (IOException e)
+        {
+            System.out.println("There was an error whilst reading the file " + args[1]);
+        }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Please specify simulation file");
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println("value is null");
+        }
+        catch (NumberFormatException e)
+        {
+            System.out.println("A number entered is not valid in file");
+        }
     }
 
 }

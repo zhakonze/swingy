@@ -1,1 +1,1 @@
-mvn clean package && clear && java -jar target/swingy-1.0-SNAPSHOT.jar console
+mvn clean package && clear && java -jar swingy.jar console hero.txt
