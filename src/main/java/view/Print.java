@@ -4,6 +4,7 @@ import java.util.Scanner;
 import controller.CharacterController;
 import model.characters.Hero;
 import model.characters.Villain;
+import util.Reader;
 
 public class Print {
     Print()
@@ -56,10 +57,11 @@ public class Print {
 
         System.out.println("Hero List: ");
         System.out.println("|-------------------------------------------------------|");
-        System.out.println("| >> 1.Hero0                                            |");
-        System.out.println("| >> 2.Hero1                                            |");
-        System.out.println("| >> 3.Hero2                                            |");
-        System.out.println("| << 4.Back                                             |");
+//        System.out.println("| >> 1.Hero0                                            |");
+//        System.out.println("| >> 2.Hero1                                            |");
+//        System.out.println("| >> 3.Hero2                                            |");
+//        System.out.println("| << 4.Back                                             |");
+        System.out.println(Reader.getStats("hero.txt"));
         System.out.println("|-------------------------------------------------------|");
         int _opt = scanf.nextInt();
         if(_opt == 1) {

@@ -15,11 +15,6 @@ public class Hero extends Character
     private int y;
 
 
-    Hero()
-    {
-
-    }
-
     public Hero(String name)
     {
         this._name = name;
@@ -29,6 +24,18 @@ public class Hero extends Character
         this._healthPoint = 100;
         this.Xp = 0;
         this.Attack = 12;
+
+    }
+
+    public Hero(String name, int level, int attack, int hp, int Xpr)
+    {
+        this._name = name;
+        this._level = level;
+        this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
+        this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
+        this._healthPoint = hp;
+        this.Xp = Xpr;
+        this.Attack = attack;
 
     }
 
