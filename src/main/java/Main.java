@@ -1,6 +1,7 @@
 import lombok.Getter;
 import lombok.Setter;
 import model.characters.Hero;
+import util.LoggerWrite;
 import view.Print;
 
 import java.io.BufferedReader;
@@ -53,6 +54,10 @@ public class Main
         catch (NumberFormatException e)
         {
             System.out.println("A number entered is not valid in file");
+        }
+        finally
+        {
+            LoggerWrite.closeFile();
         }
 
 

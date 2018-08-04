@@ -57,15 +57,26 @@ public class Print {
 
         System.out.println("Hero List: ");
         System.out.println("|-------------------------------------------------------|");
-//        System.out.println("| >> 1.Hero0                                            |");
-//        System.out.println("| >> 2.Hero1                                            |");
-//        System.out.println("| >> 3.Hero2                                            |");
-//        System.out.println("| << 4.Back                                             |");
         System.out.println(Reader.getStats("hero.txt"));
         System.out.println("|-------------------------------------------------------|");
         int _opt = scanf.nextInt();
-        if(_opt == 1) {
-            System.out.println("Working on it");
+        if(_opt < CharacterController._Heros.size())
+        {
+            Hero selectedHero = CharacterController._Heros.get(_opt);
+
+            String n = selectedHero.get_name();
+            int l = selectedHero.get_level();
+            int a = selectedHero.getAttack();
+            int h = selectedHero.get_healthPoint();
+            int x = selectedHero.getXp();
+            Hero _newHero = new Hero(n,l,a,h,x);
+            Map map = new Map(_newHero);
+            Villain vili = new Villain();
+            boolean gameContinues = true;
+            while (gameContinues)
+            {
+                gameContinues = CharacterController.manageMovement(_newHero, map, vili);
+            }
         }
         return (_opt);
         //_newHero.Attack();
