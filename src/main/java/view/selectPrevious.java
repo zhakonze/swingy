@@ -4,6 +4,6 @@ import javax.swing.*;
 
 public class selectPrevious {
     private JButton SELECTButton;
-    private JList list1;
+    private JList heroList;
     private JTextField textField1;
 }

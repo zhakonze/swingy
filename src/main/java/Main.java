@@ -2,6 +2,7 @@ import lombok.Getter;
 import lombok.Setter;
 import model.characters.Hero;
 import util.LoggerWrite;
+import view.Colors;
 import view.Print;
 
 import java.io.BufferedReader;
@@ -24,15 +25,24 @@ public class Main
         {
             BufferedReader reader = new BufferedReader(new FileReader("hero.txt"));
             String line = "";
+            //Print._menU();
+            if (args.length == 2){
+                switch(args[0].toLowerCase()){
+                    case "console":
+                        Print._menU();
+                        break;
+                    case "gui":
+                        //MainGameController.readToList();
+                        //MainGameController.GUIrun();
+                        break;
+                    default:
+                        System.out.println(Colors.ANSI_RED + "Invalid parameters. \nUsage: java -jar file.jar [gui/console]" + Colors.ANSI_RESET);
+                        break;
+                }
+            }else {
+                System.out.println(Colors.ANSI_RED + "Invalid parameters. \nUsage: java -jar file.jar [gui/console]" + Colors.ANSI_RESET);
+            }
 
-            Print._menU();
-//            while ((line = reader.readLine()) != null)
-//            {
-//                _newHeroes.add(new Hero(line.split(",")[0], Integer.parseInt(line.split(",")[1]),
-//                        Integer.parseInt(line.split(",")[2]), Integer.parseInt(line.split(",")[3]),
-//                        Integer.parseInt(line.split(",")[4])));
-//            }
-//            reader.close();
 
         }
         catch (FileNotFoundException e)

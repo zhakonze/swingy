@@ -1,4 +1,5 @@
 view/Map.class
+view/fightSimulation.class
 view/StartGame.class
 view/playGround.class
 model/artifacts/WeaponType.class
