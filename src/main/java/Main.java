@@ -25,7 +25,7 @@ public class Main
             BufferedReader reader = new BufferedReader(new FileReader("hero.txt"));
             String line = "";
 
-                    Print._menU();
+            Print._menU();
 //            while ((line = reader.readLine()) != null)
 //            {
 //                _newHeroes.add(new Hero(line.split(",")[0], Integer.parseInt(line.split(",")[1]),
