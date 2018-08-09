@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9e1518a-64f3-4f53-85d6-2477d7d95f68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/fightSimulation.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/fightSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/homeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/homeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/selectPrevious.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/selectPrevious.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/selectPrevious.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/selectPrevious.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/createScreen.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/createScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/createScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/homeScreen.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/homeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swingy.jar" beforeDir="false" afterPath="$PROJECT_DIR$/swingy.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/homeScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/homeScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/selectPrevious.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/selectPrevious.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -29,21 +31,16 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
+            <state relative-caret-position="495">
+              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homeScreen.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/homeScreen.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file leaf-file-name="CharacterController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
+            <state relative-caret-position="589">
               <caret line="146" selection-start-line="146" selection-end-line="146" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,14 +49,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeScreen.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/homeScreen.java">
+      <file leaf-file-name="HomeScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/HomeScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="568">
+              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/createScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fightSimulation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/fightSimulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -68,7 +86,16 @@
         <entry file="file://$PROJECT_DIR$/run.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="67" lean-forward="true" selection-start-column="67" selection-end-column="67" />
+              <caret column="54" selection-start-column="54" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -78,38 +105,8 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file leaf-file-name="selectPrevious.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/selectPrevious.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Print.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/Print.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/util/Reader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="66" lean-forward="true" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fightSimulation.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/fightSimulation.form">
+      <file leaf-file-name="playGround.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/playGround.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
@@ -136,7 +133,6 @@
         <option value="$PROJECT_DIR$/src/main/java/model/characters/Villain.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/characters/Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/Map.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controller/GamePlayController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/LoggerWrite.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/characters/Hero.java" />
@@ -146,16 +142,20 @@
         <option value="$PROJECT_DIR$/src/main/java/view/Print.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/LoggerWrite.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/gamePlay.form" />
-        <option value="$PROJECT_DIR$/src/main/java/view/createScreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/view/homeScreen.form" />
         <option value="$PROJECT_DIR$/src/main/java/view/createScreen.form" />
         <option value="$PROJECT_DIR$/src/main/java/view/playGround.form" />
         <option value="$PROJECT_DIR$/src/main/java/view/fightSimulation.form" />
-        <option value="$PROJECT_DIR$/run.sh" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/selectPrevious.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/selectPrevious.form" />
+        <option value="$PROJECT_DIR$/src/main/java/view/shaggy.form" />
+        <option value="$PROJECT_DIR$/src/main/java/view/homeScreen.form" />
         <option value="$PROJECT_DIR$/src/main/java/view/homeScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/HomeScreen.form" />
+        <option value="$PROJECT_DIR$/run.sh" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/HomeScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/createScreen.java" />
       </list>
     </option>
   </component>
@@ -175,7 +175,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -241,16 +241,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="homeScreen" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="swingy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="swingy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="selectPrevious" type="e9f4de52:FormNode" />
+              <item name="fightSimulation" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -277,8 +268,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,6 +300,12 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="swingy" />
+      <option name="PROGRAM_PARAMETERS" value="gui hero.txt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -350,6 +347,11 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -385,94 +387,84 @@
       <workItem from="1533278129449" duration="6958000" />
       <workItem from="1533292034703" duration="9146000" />
       <workItem from="1533364966491" duration="10016000" />
+      <workItem from="1533797284904" duration="12872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211471000" />
+    <option name="totallyTimeSpent" value="224343000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.21206225" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32935324" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" weight="0.19800995" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15282215" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
+      <window_info anchor="bottom" id="Messages" weight="0.32935324" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.21206225" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" visible="true" weight="0.2889105" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32935324" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.56218904" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" visible="true" weight="0.2885572" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
+      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.56218904" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1517572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32935324" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32935324" />
       <window_info anchor="right" id="Bean Validation" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" visible="true" weight="0.2889105" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.21206225" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947917" visible="true" weight="0.2885572" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005208" side_tool="true" weight="0.21206225" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32935324" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39900497" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32935324" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
     </layout-to-restore>
@@ -483,40 +475,45 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/characters/Hero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/characters/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -528,9 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,13 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="57" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -621,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,9 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,46 +673,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/createScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/createScreen.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/playGround.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/fightSimulation.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/playGround.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/fightSimulation.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="67" lean-forward="true" selection-start-column="67" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/fightSimulation.form" />
     <entry file="file://$PROJECT_DIR$/src/main/java/view/selectPrevious.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -748,18 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/util/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="66" lean-forward="true" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        <state relative-caret-position="210">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -769,13 +704,77 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/view/selectPrevious.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/homeScreen.form">
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/playGround.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/homeScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/shaggy.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="589">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/shaggy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/HomeScreen.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/createScreen.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/fightSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/HomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/createScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

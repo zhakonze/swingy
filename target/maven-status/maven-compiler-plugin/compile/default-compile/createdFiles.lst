@@ -7,10 +7,11 @@ Main.class
 util/Reader.class
 model/artifacts/Armor.class
 view/createScreen.class
+view/HomeScreen$1.class
 model/characters/Hero.class
 view/SelectHero.class
-view/homeScreen.class
 view/Print.class
+view/shaggy.class
 view/NewHero.class
 model/characters/Character$Helm.class
 storage/HeroStorage.class
@@ -22,6 +23,8 @@ model/artifacts/Weapon.class
 controller/CharacterController.class
 util/CharacterFactory.class
 view/selectPrevious.class
+view/HomeScreen$2.class
+view/HomeScreen.class
 model/characters/Character.class
 model/characters/Villain.class
 view/Colors.class

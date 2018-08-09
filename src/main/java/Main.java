@@ -3,15 +3,19 @@ import lombok.Setter;
 import model.characters.Hero;
 import util.LoggerWrite;
 import view.Colors;
+import view.HomeScreen;
 import view.Print;
+import view.shaggy;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 @Getter
 @Setter
 public class Main
@@ -34,6 +38,17 @@ public class Main
                     case "gui":
                         //MainGameController.readToList();
                         //MainGameController.GUIrun();
+                        //
+                       // HomeScreen HomeScreen = new HomeScreen();
+
+                        HomeScreen.InitGUI();
+//
+//
+//                        JFrame window = new JFrame();
+//
+//                        window.setContentPane(home.panel1);
+//                        window.setVisible(true);
+//                        window.setMinimumSize(new Dimension(600,600));
                         break;
                     default:
                         System.out.println(Colors.ANSI_RED + "Invalid parameters. \nUsage: java -jar file.jar [gui/console]" + Colors.ANSI_RESET);
@@ -57,10 +72,10 @@ public class Main
         {
             System.out.println("Please specify simulation file");
         }
-        catch (NullPointerException e)
+        /*catch (NullPointerException e)
         {
             System.out.println("value is null");
-        }
+        }*/
         catch (NumberFormatException e)
         {
             System.out.println("A number entered is not valid in file");
