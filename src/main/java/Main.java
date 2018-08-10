@@ -5,10 +5,7 @@ import util.LoggerWrite;
 import view.Colors;
 import view.HomeScreen;
 import view.Print;
-import view.shaggy;
 
-import javax.swing.*;
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

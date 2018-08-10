@@ -23,8 +23,8 @@ public class HomeScreen {
         selectFromExistingHeroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
+                selectPrevious.InitSELECT();
+                window.dispose();
             }
         });
         createNewHeroButton.addActionListener(new ActionListener() {
@@ -39,7 +39,7 @@ public class HomeScreen {
     public static void InitGUI()
     {
         initHomeScreen();
-        window.setMinimumSize(new Dimension(600,300));
+        window.setMinimumSize(new Dimension(650,600));
         window.setContentPane(panel1);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.pack();
