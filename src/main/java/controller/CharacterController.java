@@ -135,16 +135,67 @@ public class CharacterController
         }
     }
 
+    public static String fight2(Hero hero, Map map) {
+        String[] attacks = {"punch", "karate kick", "spear", "panga", "sword"};
+        Random rand = new Random();
+        String fightString = "";
+
+        Villain villain = getVillain(hero.getX(), hero.getY());
+        fightString += hero.get_name() + " Entered attack mode...";
+        fightString += "Your current opponent has the following stats...\n\n";
+
+        fightString += "Name             : " + villain.get_name();
+        fightString += "\nHealth Points    : " + villain.get_healthPoint();
+        fightString += "\nDefence strength : " + villain.getDefense();
+        fightString += "\nAttack strength  : " + villain.getAttack();
+
+
+        int hero_dmg = hero.getAttack() - villain.getDefense();
+        int enemy_dmg = villain.getAttack() - hero.getDefense();
+
+        if (hero_dmg < 0)
+            hero_dmg = 0;
+        if (enemy_dmg < 0)
+            enemy_dmg = 0;
+
+
+        while (hero.get_healthPoint() > 0 && villain.get_healthPoint() > 0) {
+            int random_attack_name = rand.nextInt(5);
+            int rand_attacker = rand.nextInt(2);
+            switch (rand_attacker) {
+                case 0:
+                    fightString += hero.get_name() + " attacks " + villain.get_name() + " with a " + attacks[random_attack_name] + " causing " + hero_dmg + " damage\n";
+                    villain.set_healthPoint(villain.get_healthPoint() - hero_dmg);
+                    break;
+                case 1:
+                    fightString += villain.get_name() + " attacks " + hero.get_name() + " with a " + attacks[random_attack_name] + " causing " + enemy_dmg + " damage\n";
+                    hero.set_healthPoint(hero.get_healthPoint() - enemy_dmg);
+                    break;
+            }
+//            try {
+//                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+            fightString += "Hero HP = " + hero.get_healthPoint() + " ------ Villain HP = " + villain.get_healthPoint();
+        }
+        if (hero.get_healthPoint() <= 0)
+            fightString += "\nYou were defeated.. YOU LOSE!!";
+        else if (villain.get_healthPoint() <= 0)
+        {
+            map.get_grid()[hero.getY()][hero.getX()] = 0;
+            fightString += "\nYou defeated the enemy";
+            hero.setX(hero.getX() + 1);
+        }
+        return (fightString);
+    }
+
     public static void _Drops(Villain v)
     {
         System.out.println(v.get_name() + " dropped " + v.getArmor() + " and " + v.getWeapon());
         System.out.println("Would you like to add it to the hero's artifacts?");
         System.out.println("1. Yes");
         System.out.println("2. No");
-
-
-
-
     }
 
     public static void enemySpawn()

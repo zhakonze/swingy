@@ -1,9 +1,17 @@
 package view;
 
+import controller.CharacterController;
+import model.characters.Hero;
+import model.characters.Villain;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+
+import static controller.CharacterController.checkCollision;
 
 public class playGround {
     private static JButton UPButton = new JButton("UP");
@@ -14,32 +22,84 @@ public class playGround {
     private static JPanel playScreen = new JPanel();
     private static JLabel welcomeLabel = new JLabel("EXPLORE");
     private static JFrame window = new JFrame();
+    private static String _name = createScreen.get_getValue();
+    private static Hero _newHero = new Hero(_name);
+    private static Map _arena = new Map(_newHero);
+    public static List<Villain> _newVillains = CharacterController.get_newVillains();
+    public static List<Villain> get_newVillains()
+    {
+        return _newVillains;
+    }
+    public static Hero get_newHero() {
+        return _newHero;
+    }
+    public static Map get_arena() {
+        return _arena;
+    }
+
+
+
+//    public static boolean checkCollision(Hero _newHero)
+//    {
+//        for (int i = 0; i < get_newVillains().size(); i++)
+//        {
+//            if (_newHero.getX() == get_newVillains().get(i).getX() && _newHero.getY() == get_newVillains().get(i).getY())
+//                return true;
+//        }
+//        return false;
+//    }
+
 
     private static void initPlay()
     {
+
+        playFloor.setText(_arena.displayMap2(_newHero));
         UPButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fightSimulation.InitFight();
-                window.dispose();
+
+                _newHero.setY(_newHero.getY() - 1);
+                if (checkCollision(_newHero)) {
+                    welcomeLabel.setText("collided");
+                    fightSimulation.InitFight();
+                    window.dispose();
+                }
+                else
+                    welcomeLabel.setText("Explore");
+                playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
         DOWNButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                _newHero.setY(_newHero.getY() + 1);
+                if (checkCollision(_newHero))
+                    welcomeLabel.setText("collided");
+                else
+                    welcomeLabel.setText("Explore");
+                playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
         RIGHTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                _newHero.setX(_newHero.getX() + 1);
+                if (checkCollision(_newHero))
+                    welcomeLabel.setText("collided");
+                else
+                    welcomeLabel.setText("Explore");
+                playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
         LEFTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                _newHero.setX(_newHero.getX() - 1);
+                if (checkCollision(_newHero))
+                    welcomeLabel.setText("collided");
+                else
+                    welcomeLabel.setText("Explore");
+                playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
 
@@ -67,6 +127,7 @@ public class playGround {
         window.pack();
         window.setLayout(null);
         window.setVisible(true);
+//        playFloor.setText(_arena.displayMap2(_newHero));
     }
 
 }

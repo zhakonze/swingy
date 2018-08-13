@@ -1,5 +1,7 @@
 package view;
 
+import controller.CharacterController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,16 +14,18 @@ public class fightSimulation {
     private static JFrame window = new JFrame();
     private static JPanel fightScreen = new JPanel();
     private static JLabel welcomeLabel = new JLabel("FIGHT OR RUN");
+    private static JScrollPane scrollPane = new JScrollPane(fightFloor,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+
 
     private static void initBATTLE()
     {
         fightButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                fightFloor.setText(CharacterController.fight2(playGround.get_newHero(), playGround.get_arena()));
             }
         });
-        fightButton.addActionListener(new ActionListener() {
+        runButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -31,11 +35,11 @@ public class fightSimulation {
 
         runButton.setBounds(250, 500 , 150, 20);
         fightButton.setBounds(250, 530 , 150, 20);
-        fightFloor.setBounds(50, 50 , 550, 400);
+        scrollPane.setBounds(50, 50 , 550, 400);
         welcomeLabel.setBounds(225, 20 , 200, 20);
         fightScreen.add(fightButton);
         fightScreen.add(runButton);
-        fightScreen.add(fightFloor);
+        fightScreen.add(scrollPane);
         fightScreen.add(welcomeLabel);
         fightScreen.setLayout(null);
     }

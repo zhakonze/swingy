@@ -109,6 +109,39 @@ public class Map
         System.out.print(ANSI_RESET );
     }
 
+
+    public String displayMap2(Hero hero)
+    {
+        Random random = new Random();
+        boolean didShow = false;
+        String mapString = "";
+
+        for(int i = 0; i < _rows; i++)
+        {
+            for (int j = 0; j < _cols; j++)
+            {
+                didShow = false;
+                if (_newHero.getX() == j && _newHero.getY() == i)
+                {
+                    mapString +=  "H " ;
+                }
+                else if (_grid[i][j] == 1)
+                {
+                    mapString += "E ";
+                    didShow = true;
+                }
+                else {
+                    mapString += "* ";
+                }
+
+            }
+            mapString += "\n";
+
+        }
+        return (mapString);
+
+    }
+
     public void set_grid(int y, int x, char value)
     {
         _grid[x][y] = value;

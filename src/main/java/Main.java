@@ -33,19 +33,7 @@ public class Main
                         Print._menU();
                         break;
                     case "gui":
-                        //MainGameController.readToList();
-                        //MainGameController.GUIrun();
-                        //
-                       // HomeScreen HomeScreen = new HomeScreen();
-
                         HomeScreen.InitGUI();
-//
-//
-//                        JFrame window = new JFrame();
-//
-//                        window.setContentPane(home.panel1);
-//                        window.setVisible(true);
-//                        window.setMinimumSize(new Dimension(600,600));
                         break;
                     default:
                         System.out.println(Colors.ANSI_RED + "Invalid parameters. \nUsage: java -jar file.jar [gui/console]" + Colors.ANSI_RESET);

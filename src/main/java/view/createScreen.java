@@ -18,12 +18,24 @@ public class createScreen {
     private static JLabel nameLabel = new JLabel("Enter Your Hero Name");
     private static JLabel welcomeLabel = new JLabel("CREATE A NEW HERO");
     private static JFrame window = new JFrame();
+    private static String _getValue;
+
+    public static String get_getValue() {
+        return _getValue;
+    }
+
+//    public static void set_getValue(String getValue) {
+//        createScreen._getValue = getValue;
+//    }
+
+
 
     private static void initcreateScreen()
     {
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                _getValue  = nameField.getText();
                 playGround.InitPLAY();
                 window.dispose();
             }
