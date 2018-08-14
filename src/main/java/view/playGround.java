@@ -15,6 +15,7 @@ import static controller.CharacterController.checkCollision;
 import static controller.CharacterController.checkEndMap;
 
 public class playGround {
+    private static boolean isListenersSet = false;
     private static JButton UPButton = new JButton("UP");
     private static JButton RIGHTButton = new JButton("RIGHT");
     private static JButton LEFTButton = new JButton("LEFT");
@@ -61,7 +62,7 @@ public class playGround {
         if (checkEndMap(_newHero, _arena))
         {
             welcomeLabel.setText("YOU HAVE SUCCESSFULLY COMPLETED YOUR MISSION");
-            _newHero.setXp(1000);
+            _newHero.setXp(_newHero.get_level() * 1000 + (_newHero.get_level() - 1) * 2 * 450);
             _newHero.set_level(_newHero.get_level() + 1);
         }
     }
@@ -69,13 +70,12 @@ public class playGround {
 
     private static void initPlay()
     {
-        playFloor.setText(_arena.displayMap2(_newHero));
+
         UPButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-
+            public void actionPerformed(ActionEvent e)
+            {
                 _newHero.setY(_newHero.getY() - 1);
-                _collolider(_newHero);
                 _edges(_newHero, _arena);
                 playFloor.setText(_arena.displayMap2(_newHero));
             }
@@ -123,9 +123,14 @@ public class playGround {
         playScreen.setLayout(null);
     }
 
-    public static void InitPLAY()
+    public static void  InitPLAY()
     {
-        initPlay();
+        playFloor.setText(_arena.displayMap2(_newHero));
+        if (isListenersSet == false)
+        {
+            isListenersSet = true;
+            initPlay();
+        }
         window.setMinimumSize(new Dimension(650,600));
         window.setContentPane(playScreen);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

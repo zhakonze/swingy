@@ -13,7 +13,6 @@ model/artifacts/Armor.class
 view/createScreen.class
 view/HomeScreen$1.class
 model/characters/Hero.class
-view/SelectHero.class
 view/Print.class
 view/playGround$2.class
 view/NewHero.class

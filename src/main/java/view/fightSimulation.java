@@ -28,8 +28,11 @@ public class fightSimulation {
         runButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                playGround.getPlayFloor().setText(playGround.get_arena().displayMap2(playGround.get_newHero()));
+                System.out.println("clicked run");
                 //playGround.getPlayFloor().setText(playGround.get_arena().displayMap2(playGround.get_newHero()));
+                playGround.InitPLAY();
+                window.dispose();
+                System.out.println("After run");
             }
         });
         runButton.setBounds(250, 500 , 150, 20);
