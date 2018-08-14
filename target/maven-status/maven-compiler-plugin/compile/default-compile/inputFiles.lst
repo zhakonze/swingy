@@ -17,6 +17,8 @@
 /goinfre/zhakonze/Desktop/swingy/src/main/java/view/selectPrevious.java
 /goinfre/zhakonze/Desktop/swingy/src/main/java/model/artifacts/Armor.java
 /goinfre/zhakonze/Desktop/swingy/src/main/java/util/LoggerWrite.java
+/goinfre/zhakonze/Desktop/swingy/src/main/java/view/gameOver.java
+/goinfre/zhakonze/Desktop/swingy/src/main/java/view/youLose.java
 /goinfre/zhakonze/Desktop/swingy/src/main/java/controller/GamePlayController.java
 /goinfre/zhakonze/Desktop/swingy/src/main/java/model/characters/Hero.java
 /goinfre/zhakonze/Desktop/swingy/src/main/java/view/WindowManger.java

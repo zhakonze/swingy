@@ -24,12 +24,6 @@ public class createScreen {
         return _getValue;
     }
 
-//    public static void set_getValue(String getValue) {
-//        createScreen._getValue = getValue;
-//    }
-
-
-
     private static void initcreateScreen()
     {
         createButton.addActionListener(new ActionListener() {

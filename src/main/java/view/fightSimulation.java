@@ -23,6 +23,8 @@ public class fightSimulation {
             @Override
             public void actionPerformed(ActionEvent e) {
                 fightFloor.setText(CharacterController.fight2(playGround.get_newHero(), playGround.get_arena()));
+                if(playGround.get_newHero().get_healthPoint() <= 0)
+                    youLose.InitgameOver();
             }
         });
         runButton.addActionListener(new ActionListener() {

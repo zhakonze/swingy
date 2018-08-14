@@ -62,8 +62,10 @@ public class playGround {
         if (checkEndMap(_newHero, _arena))
         {
             welcomeLabel.setText("YOU HAVE SUCCESSFULLY COMPLETED YOUR MISSION");
+            gameOver.InitgameOver();
             _newHero.setXp(_newHero.get_level() * 1000 + (_newHero.get_level() - 1) * 2 * 450);
             _newHero.set_level(_newHero.get_level() + 1);
+            window.dispose();
         }
     }
 
@@ -76,6 +78,7 @@ public class playGround {
             public void actionPerformed(ActionEvent e)
             {
                 _newHero.setY(_newHero.getY() - 1);
+                _collolider(_newHero);
                 _edges(_newHero, _arena);
                 playFloor.setText(_arena.displayMap2(_newHero));
             }
@@ -137,7 +140,6 @@ public class playGround {
         window.pack();
         window.setLayout(null);
         window.setVisible(true);
-//        playFloor.setText(_arena.displayMap2(_newHero));
     }
 
 }

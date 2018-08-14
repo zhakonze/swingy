@@ -22,6 +22,7 @@ view/createScreen$1.class
 model/Game.class
 controller/GamePlayController.class
 view/WindowManger.class
+view/gameOver.class
 view/PlayMission.class
 model/artifacts/Weapon.class
 controller/CharacterController.class
@@ -32,6 +33,7 @@ view/HomeScreen.class
 model/characters/Character.class
 model/characters/Villain.class
 view/fightSimulation$2.class
+view/youLose.class
 view/playGround$3.class
 view/Colors.class
 util/LoggerWrite.class
