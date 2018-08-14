@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static controller.CharacterController.checkCollision;
+import static controller.CharacterController.checkEndMap;
 
 public class playGround {
     private static JButton UPButton = new JButton("UP");
@@ -36,36 +37,46 @@ public class playGround {
     public static Map get_arena() {
         return _arena;
     }
+    public static JTextArea getPlayFloor() {
+        return playFloor;
+    }
 
 
 
-//    public static boolean checkCollision(Hero _newHero)
-//    {
-//        for (int i = 0; i < get_newVillains().size(); i++)
-//        {
-//            if (_newHero.getX() == get_newVillains().get(i).getX() && _newHero.getY() == get_newVillains().get(i).getY())
-//                return true;
-//        }
-//        return false;
-//    }
+
+
+    public static void _collolider(Hero _newHero)
+    {
+        if (checkCollision(_newHero)) {
+            welcomeLabel.setText("collided");
+            fightSimulation.InitFight();
+            window.dispose();
+        }
+        else
+            welcomeLabel.setText("Explore");
+    }
+
+    public static void _edges(Hero _newHero, Map _arena)
+    {
+        if (checkEndMap(_newHero, _arena))
+        {
+            welcomeLabel.setText("YOU HAVE SUCCESSFULLY COMPLETED YOUR MISSION");
+            _newHero.setXp(1000);
+            _newHero.set_level(_newHero.get_level() + 1);
+        }
+    }
 
 
     private static void initPlay()
     {
-
         playFloor.setText(_arena.displayMap2(_newHero));
         UPButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 _newHero.setY(_newHero.getY() - 1);
-                if (checkCollision(_newHero)) {
-                    welcomeLabel.setText("collided");
-                    fightSimulation.InitFight();
-                    window.dispose();
-                }
-                else
-                    welcomeLabel.setText("Explore");
+                _collolider(_newHero);
+                _edges(_newHero, _arena);
                 playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
@@ -73,10 +84,8 @@ public class playGround {
             @Override
             public void actionPerformed(ActionEvent e) {
                 _newHero.setY(_newHero.getY() + 1);
-                if (checkCollision(_newHero))
-                    welcomeLabel.setText("collided");
-                else
-                    welcomeLabel.setText("Explore");
+                _collolider(_newHero);
+                _edges(_newHero, _arena);
                 playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
@@ -84,10 +93,8 @@ public class playGround {
             @Override
             public void actionPerformed(ActionEvent e) {
                 _newHero.setX(_newHero.getX() + 1);
-                if (checkCollision(_newHero))
-                    welcomeLabel.setText("collided");
-                else
-                    welcomeLabel.setText("Explore");
+                _collolider(_newHero);
+                _edges(_newHero, _arena);
                 playFloor.setText(_arena.displayMap2(_newHero));
             }
         });
@@ -95,10 +102,8 @@ public class playGround {
             @Override
             public void actionPerformed(ActionEvent e) {
                 _newHero.setX(_newHero.getX() - 1);
-                if (checkCollision(_newHero))
-                    welcomeLabel.setText("collided");
-                else
-                    welcomeLabel.setText("Explore");
+                _collolider(_newHero);
+                _edges(_newHero, _arena);
                 playFloor.setText(_arena.displayMap2(_newHero));
             }
         });

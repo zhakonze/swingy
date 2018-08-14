@@ -28,11 +28,10 @@ public class fightSimulation {
         runButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                playGround.getPlayFloor().setText(playGround.get_arena().displayMap2(playGround.get_newHero()));
+                //playGround.getPlayFloor().setText(playGround.get_arena().displayMap2(playGround.get_newHero()));
             }
         });
-
-
         runButton.setBounds(250, 500 , 150, 20);
         fightButton.setBounds(250, 530 , 150, 20);
         scrollPane.setBounds(50, 50 , 550, 400);

@@ -16,9 +16,6 @@ import static view.Colors.*;
 public class CharacterController
 {
 
-    //TODO call reader first at beginning
-    //TODO to access
-
     public static List<Villain> _newVillains = new ArrayList<>();
     public static List<Hero> _Heros = new ArrayList<Hero>();
     public static List<Villain> get_newVillains()
@@ -177,7 +174,7 @@ public class CharacterController
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
-            fightString += "Hero HP = " + hero.get_healthPoint() + " ------ Villain HP = " + villain.get_healthPoint();
+            fightString += "Hero HP = " + hero.get_healthPoint() + " ------ Villain HP = " + villain.get_healthPoint() + "  ";
         }
         if (hero.get_healthPoint() <= 0)
             fightString += "\nYou were defeated.. YOU LOSE!!";
