@@ -24,17 +24,22 @@ public class fightSimulation {
             public void actionPerformed(ActionEvent e) {
                 fightFloor.setText(CharacterController.fight2(playGround.get_newHero(), playGround.get_arena()));
                 if(playGround.get_newHero().get_healthPoint() <= 0)
+                {
                     youLose.InitgameOver();
+                    window.dispose();
+                }
+                else
+                {
+                    playGround.InitPLAY();
+                    window.dispose();
+                }
             }
         });
         runButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("clicked run");
-                //playGround.getPlayFloor().setText(playGround.get_arena().displayMap2(playGround.get_newHero()));
                 playGround.InitPLAY();
                 window.dispose();
-                System.out.println("After run");
             }
         });
         runButton.setBounds(250, 500 , 150, 20);
