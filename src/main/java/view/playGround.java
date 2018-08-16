@@ -26,7 +26,7 @@ public class playGround {
     private static JFrame window = new JFrame();
     private static String _name = createScreen.get_getValue();
     private static Hero _newHero = new Hero(_name);
-    private static Hero _preVHero = new Hero(_name, 1, 1, 1,1);
+    private static Hero _preVHero = new Hero(selectPrevious.getNam(),selectPrevious.getLEVEL(), selectPrevious.getATT(), selectPrevious.getHP(),selectPrevious.getXP());
     private static Map _arena = new Map(_newHero);
     public static List<Villain> _newVillains = CharacterController.get_newVillains();
     public static List<Villain> get_newVillains()

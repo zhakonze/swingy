@@ -21,6 +21,7 @@ storage/HeroStorage.class
 view/createScreen$1.class
 model/Game.class
 controller/GamePlayController.class
+view/selectPrevious$2.class
 view/WindowManger.class
 view/gameOver.class
 view/PlayMission.class

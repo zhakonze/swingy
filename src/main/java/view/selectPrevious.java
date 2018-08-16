@@ -3,41 +3,96 @@ package view;
 import util.Reader;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class selectPrevious {
-    private static String[] _heros = Reader.getStats2("hero.txt");
+    private static String[] _heros = Reader.getHeroName("hero.txt");
+    private static String[] _heroValues = Reader.getHeroValue("hero.txt");
     private static JButton SELECTButton = new JButton("SELECT");
     private static JList heroList = new JList(_heros);
     private static JPanel prevScreen = new JPanel();
-    private static JTextField textField1 = new JTextField();
     private static JLabel welcomeLabel = new JLabel("SELECT HERO FROM LIST");
     private static JFrame window = new JFrame();
+    private static int test = -1;
+    private static String Nam;
+    private static int LEVEL;
+    private static int ATT;
+    private static int HP;
+    private static int XP;
+    public static String getNam() {
+        return Nam;
+    }
+
+    public static int getLEVEL() {
+        return LEVEL;
+    }
+
+    public static int getATT() {
+        return ATT;
+    }
+
+    public static int getHP() {
+        return HP;
+    }
+
+    public static int getXP() {
+        return XP;
+    }
+
+
+
+
 
     private static void initPreV()
     {
-        String selected = (String) heroList.getSelectedValue();
+        heroList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                String[] l;
+                test = heroList.getSelectedIndex();
+                JOptionPane.showMessageDialog(null, "Selected index = " + test + "\nValue = " + _heros[test]);
+
+
+
+            }
+        });
         SELECTButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(selected);
+            public void actionPerformed(ActionEvent e)
+            {
+
+                for(int i = 0; i< _heroValues.length; i++)
+                {
+                    String[] M = _heroValues[i].split(",");
+                    if(_heros[test].equals(M[0]))
+                    {
+                        Nam = M[0];
+                        LEVEL = Integer.parseInt(M[1]);
+                        ATT = Integer.parseInt(M[2]);
+                        HP = Integer.parseInt(M[3]);
+                        XP = Integer.parseInt(M[4]);
+
+                        System.out.println(M[0] + " " + M[1] + " " + M[2] + " " + M[3]+ " " + M[4]);
+                    }
+
+                }
                 playGround.InitPLAY();
                 window.dispose();
             }
         });
 
-        SELECTButton.setBounds(300, 500 , 150, 20);
+        SELECTButton.setBounds(200, 500 , 200, 20);
         heroList.setBounds(200, 50 , 200, 400);
-        textField1.setBounds(100, 500 , 150, 20);
         welcomeLabel.setBounds(225, 20 , 200, 20);
         heroList.setVisibleRowCount(5);
         heroList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         prevScreen.add(new JScrollPane(heroList));
         prevScreen.add(SELECTButton);
         prevScreen.add(heroList);
-        prevScreen.add(textField1);
         prevScreen.add(welcomeLabel);
         prevScreen.setLayout(null);
     }
