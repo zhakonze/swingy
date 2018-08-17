@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class fightSimulation {
+public class fightSimulation2 {
     private static JButton fightButton = new JButton("FIGHT");
     private static JButton runButton = new JButton("RUN");
     private static JTextArea fightFloor = new JTextArea();
@@ -24,15 +24,15 @@ public class fightSimulation {
         fightButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                fightFloor.setText(CharacterController.fight2(playGround.get_newHero(), playGround.get_arena()));
-                if(playGround.get_newHero().get_healthPoint() <= 0)
+                fightFloor.setText(CharacterController.fight2(playGround2.get_preVHero(), playGround2.get_arena()));
+                if(playGround2.get_preVHero().get_healthPoint() <= 0)
                 {
                     youLose.InitgameOver();
                     window.dispose();
                 }
                 else
                 {
-                    playGround.InitPLAY();
+                    playGround2.InitPLAY();
                     window.dispose();
                 }
             }
@@ -40,7 +40,7 @@ public class fightSimulation {
         runButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                playGround.InitPLAY();
+                playGround2.InitPLAY();
                 window.dispose();
             }
         });

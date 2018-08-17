@@ -169,11 +169,6 @@ public class CharacterController
                     hero.set_healthPoint(hero.get_healthPoint() - enemy_dmg);
                     break;
             }
-//            try {
-//                Thread.sleep(2000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
             fightString += "Hero HP = " + hero.get_healthPoint() + " ------ Villain HP = " + villain.get_healthPoint() + "  ";
         }
         if (hero.get_healthPoint() <= 0)
@@ -211,7 +206,6 @@ public class CharacterController
         for(int i = 0; i < numberV; i++)
         {
             _newVillains.add(new Villain());
-            //Make sure two enemies do spawn on the same spot
         }
 
         for (Villain v : _newVillains)
@@ -254,9 +248,8 @@ public class CharacterController
             else if (_input == 2)
                 System.exit(1);
         }
-        //Print.displayOptions(map);
 
-        if(scanf.hasNextInt() == true)//can we read4
+        if(scanf.hasNextInt() == true)
             _input = scanf.nextInt();
         else
             return(false);

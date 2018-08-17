@@ -3,10 +3,13 @@ package model.characters;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotNull;
+
 @Getter
 @Setter
 public abstract class Character
 {
+    @NotNull(message = "Name cannot be null")
     protected String _name;
     protected String _type;
     protected int _level;

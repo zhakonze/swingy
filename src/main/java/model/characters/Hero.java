@@ -19,7 +19,7 @@ public class Hero extends Character
     {
 
         this._name = name;
-        this._level = 4;
+        this._level = 1;
         this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this._healthPoint = 100;

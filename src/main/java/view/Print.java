@@ -4,6 +4,7 @@ import java.util.Scanner;
 import controller.CharacterController;
 import model.characters.Hero;
 import model.characters.Villain;
+import util.LoggerWrite;
 import util.Reader;
 
 public class Print {
@@ -77,6 +78,7 @@ public class Print {
             {
                 gameContinues = CharacterController.manageMovement(_newHero, map, vili);
             }
+            LoggerWrite.write("hello world moto");
         }
         return (_opt);
         //_newHero.Attack();
@@ -113,7 +115,7 @@ public class Print {
             {
                 gameContinues = CharacterController.manageMovement(_newHero, map, vili);
             }
-
+            LoggerWrite.write("MY HERO");
         }
         return (_opt);
     }

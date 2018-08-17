@@ -80,7 +80,7 @@ public class selectPrevious {
                     }
 
                 }
-                playGround.InitPLAY();
+                playGround2.InitPLAY();
                 window.dispose();
             }
         });

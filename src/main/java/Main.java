@@ -67,7 +67,7 @@ public class Main
         }
         finally
         {
-            LoggerWrite.closeFile();
+           // LoggerWrite.closeFile();
         }
 
 

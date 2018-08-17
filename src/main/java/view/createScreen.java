@@ -2,6 +2,7 @@ package view;
 
 import lombok.Getter;
 import lombok.Setter;
+import model.characters.Hero;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,6 +19,7 @@ public class createScreen {
     private static JLabel nameLabel = new JLabel("Enter Your Hero Name");
     private static JLabel welcomeLabel = new JLabel("CREATE A NEW HERO");
     private static JFrame window = new JFrame();
+    private static Hero _preVHero;
     private static String _getValue;
 
     public static String get_getValue() {
