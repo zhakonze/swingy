@@ -21,6 +21,7 @@ public class selectPrevious {
     private static String Nam;
     private static int LEVEL;
     private static int ATT;
+    private static int DEF;
     private static int HP;
     private static int XP;
     public static String getNam() {
@@ -33,6 +34,9 @@ public class selectPrevious {
 
     public static int getATT() {
         return ATT;
+    }
+    public static int getDEF() {
+        return DEF;
     }
 
     public static int getHP() {
@@ -73,10 +77,11 @@ public class selectPrevious {
                         Nam = M[0];
                         LEVEL = Integer.parseInt(M[1]);
                         ATT = Integer.parseInt(M[2]);
-                        HP = Integer.parseInt(M[3]);
-                        XP = Integer.parseInt(M[4]);
+                        DEF = Integer.parseInt(M[3]);
+                        HP = Integer.parseInt(M[4]);
+                        XP = Integer.parseInt(M[5]);
 
-                        System.out.println(M[0] + " " + M[1] + " " + M[2] + " " + M[3]+ " " + M[4]);
+                        System.out.println(M[0] + " " + M[1] + " " + M[2] + " " + M[3]+ " " + M[4] + " " + M[5]);
                     }
 
                 }

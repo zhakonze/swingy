@@ -68,9 +68,10 @@ public class Print {
             String n = selectedHero.get_name();
             int l = selectedHero.get_level();
             int a = selectedHero.getAttack();
+            int d = selectedHero.getDefense();
             int h = selectedHero.get_healthPoint();
             int x = selectedHero.getXp();
-            Hero _newHero = new Hero(n,l,a,h,x);
+            Hero _newHero = new Hero(n,l,a,d,h,x);
             Map map = new Map(_newHero);
             Villain vili = new Villain();
             boolean gameContinues = true;
@@ -78,7 +79,6 @@ public class Print {
             {
                 gameContinues = CharacterController.manageMovement(_newHero, map, vili);
             }
-            LoggerWrite.write("hello world moto");
         }
         return (_opt);
         //_newHero.Attack();
@@ -98,6 +98,7 @@ public class Print {
         System.out.println("| Level: " + _newHero.get_level());
         System.out.println("| Hp: " + _newHero.get_healthPoint());
         System.out.println("| Attack: " + _newHero.getAttack());
+        System.out.println("| Defense: " + _newHero.getDefense());
         System.out.println("| Armor: " + _newHero.getArmor());
         System.out.println("| Xp : " + _newHero.getXp());
         System.out.println("|------------------------------------------------------|");
@@ -115,7 +116,7 @@ public class Print {
             {
                 gameContinues = CharacterController.manageMovement(_newHero, map, vili);
             }
-            LoggerWrite.write("MY HERO");
+            LoggerWrite.writeToFile(_newHero);
         }
         return (_opt);
     }

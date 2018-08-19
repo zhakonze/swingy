@@ -24,7 +24,7 @@ public class Reader
             while ((line = reader.readLine()) != null)
             {
                 l = line.split(",");
-                hero = new Hero(l[0], Integer.parseInt(l[1]),Integer.parseInt(l[2]),Integer.parseInt(l[3]),Integer.parseInt(l[4]));
+                hero = new Hero(l[0], Integer.parseInt(l[1]),Integer.parseInt(l[2]),Integer.parseInt(l[3]),Integer.parseInt(l[4]),Integer.parseInt(l[5]));
                 CharacterController._Heros.add(hero);
                 System.out.println(index + ". " + CharacterController._Heros.get(index).get_name());
                 index++;
@@ -53,7 +53,7 @@ public class Reader
             while ((line = reader.readLine()) != null)
             {
                 l = line.split(",");
-                hero = new Hero(l[0], Integer.parseInt(l[1]),Integer.parseInt(l[2]),Integer.parseInt(l[3]),Integer.parseInt(l[4]));
+                hero = new Hero(l[0], Integer.parseInt(l[1]),Integer.parseInt(l[2]),Integer.parseInt(l[3]),Integer.parseInt(l[4]),Integer.parseInt(l[5]));
                 CharacterController._Heros.add(hero);
                 info2[index] = CharacterController._Heros.get(index).get_name();
                 index++;
@@ -85,7 +85,7 @@ public class Reader
             while ((line = reader.readLine()) != null)
             {
                 l = line.split(",");
-                hero = new Hero(l[0], Integer.parseInt(l[1]),Integer.parseInt(l[2]),Integer.parseInt(l[3]),Integer.parseInt(l[4]));
+                hero = new Hero(l[0], Integer.parseInt(l[1]),Integer.parseInt(l[2]),Integer.parseInt(l[3]),Integer.parseInt(l[4]),Integer.parseInt(l[5]));
                 CharacterController._Heros.add(hero);
                 info2[index] = CharacterController._Heros.get(index).get_name();
                 info2[index] += "," + CharacterController._Heros.get(index).get_level();

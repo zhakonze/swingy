@@ -28,9 +28,10 @@ public class playGround2 {
     private static String Nam = selectPrevious.getNam();
     private static int LEVEL = selectPrevious.getLEVEL();
     private static int ATT = selectPrevious.getATT();
+    private static int DEF = selectPrevious.getDEF();
     private static int HP = selectPrevious.getHP();
     private static int XP = selectPrevious.getXP();
-    private static Hero _preVHero = new Hero(Nam,LEVEL, ATT, HP,XP);
+    private static Hero _preVHero = new Hero(Nam,LEVEL, ATT,DEF, HP,XP);
     private static Map _arena = new Map(_preVHero);
     public static List<Villain> _newVillains = CharacterController.get_newVillains();
     public static List<Villain> get_newVillains()

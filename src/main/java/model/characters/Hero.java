@@ -23,18 +23,20 @@ public class Hero extends Character
         this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this._healthPoint = 100;
+        this.Defense = 25;
         this.Xp = 0;
         this.Attack = 12;
 
     }
 
-    public Hero(String name, int level, int attack, int hp, int Xpr)
+    public Hero(String name, int level, int attack, int Def, int hp, int Xpr)
     {
         this._name = name;
         this._level = level;
         this.x = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this.y = (((get_level() - 1) * 5 + 10 - (get_level() % 2)) / 2);
         this._healthPoint = hp;
+        this.Defense = Def;
         this.Xp = Xpr;
         this.Attack = attack;
 

@@ -8,26 +8,31 @@ import java.util.List;
 
 public class LoggerWrite
 {
-    static BufferedWriter bw = null;
-    public static String fileName = "hero.txt";
 
-    public static void write(String str)
+
+    static FileWriter fw = null;
+    static BufferedWriter bw = null;
+    static PrintWriter out = null;
+    private Hero _hero;
+    public static String FileName = "hero.txt";
+
+    public static void writeToFile(Hero _hero)
     {
         try
         {
-            File file = new File("lil.txt");
-            FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
-            System.out.println(file.getAbsoluteFile());
+            fw = new FileWriter(FileName, true);
             bw = new BufferedWriter(fw);
-            PrintWriter pw = new PrintWriter(bw);
-            pw.write(str);
-            pw.close();
+            out = new PrintWriter(bw);
+            //out.println("");
+            out.println(_hero.get_name() + "," + _hero.get_level() + "," + _hero.getAttack() + "," +  _hero.getDefense() + "," +  _hero.get_healthPoint() + "," + _hero.getXp());
+            out.close();
         }
-        catch (IOException e)
-        {
-           e.printStackTrace();
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+
 }
 
 //public class LoggerWrite
